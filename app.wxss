@@ -3,12 +3,18 @@
 
 .page-container {
   padding: 30rpx;
+  box-sizing: border-box;
 }
 
 .icon-search {
   width: 32rpx;
   height: 32rpx;
   margin-right: 14rpx;
+}
+.icon-back {
+  width: 15rpx;
+  height: 25rpx;
+  margin-right: 25rpx;
 }
 .ct {
   text-align: center;
