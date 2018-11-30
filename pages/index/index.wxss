@@ -1,0 +1,67 @@
+.searchbar {
+  background-color: rgba(235, 235, 235, 1);
+  border-radius: 36rpx;
+  height: 65rpx;
+}
+.swiper-wrap {
+  height: 180rpx;
+  border-radius: 9rpx;
+  overflow: hidden;
+  margin-bottom: 45rpx;
+}
+.swiper {
+  height: 180rpx;
+}
+.swiper .image {
+  width: 100%;
+  height: 100%;
+  border-radius: 9rpx;
+}
+.categorys {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.categorys .item{
+  text-align: center;
+  /* width: 20%; */
+}
+.categorys .image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.hot-wrap {
+  margin-top: 35rpx; 
+}
+.hot-title {
+  margin-bottom: 25rpx;
+}
+.hot-filters .item{
+  width: 25%;
+}
+.hot-filters .bd {
+  width: 0;
+  height: 24rpx;
+  border-right: 2px rgba(168, 173, 175, 1) solid;
+}
+.good-list {
+  margin-top: 20rpx;
+}
+.good-list .item {
+  padding: 30rpx 0;
+  justify-content: flex-start;
+  border-top: 1rpx rgba(221, 221, 221, 1) solid;
+}
+.good-list .image {
+  width: 160rpx;
+  height: 160rpx;
+}
+.yh {
+  border: 1px rgba(229, 57, 53, 1) solid;
+  border-radius: 2rpx;
+  padding: 5rpx 11rpx;
+}
+.icon-hot {
+  width: 25rpx;
+  height: 33rpx;
+}

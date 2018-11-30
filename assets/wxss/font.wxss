@@ -1,0 +1,40 @@
+.f-r22, .f-r24, .f-r26 {
+  font-family:PingFangSC-Regular;
+}
+.f-r22 {
+  font-size: 22rpx;
+}
+.f-r24 {
+  font-size: 24rpx;
+}
+.f-r26 {
+  font-size: 26rpx;
+}
+
+.f-m28, .f-m30, .f-m32 {
+  font-family:PingFangSC-Medium;
+  font-weight: bold;
+  color:rgba(57,64,75,1);
+}
+.f-m28 {
+  font-size: 28rpx;
+}
+.f-m30 {
+  font-size: 30rpx;
+}
+.f-m32 {
+  font-size: 32rpx;
+}
+
+.c-1 {
+  color: rgba(57, 64, 75, 1);
+}
+.c-2 {
+  color: rgba(88, 96, 107, 1);
+}
+.c-3 {
+  color: rgba(145, 153, 166, 1);
+}
+.c-r {
+  color: rgba(229, 57, 53, 1);
+}
