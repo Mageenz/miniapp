@@ -1,0 +1,108 @@
+<view class='page-container f-r30 c-1 bg-g'>
+  <view class='modules bg-w m-b20'>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>所属城市</text>
+      <view class='flex-1 m-r20'>
+        <picker mode='region' value='{{city}}'>
+          <view class='c-4 cr'>{{city[0]}}，{{city[1]}}，{{city[2]}}</view>
+        </picker>
+      </view>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>商家名称</text>
+      <input class='flex-1 cl' placeholder='请输入商家名称'></input>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>门店地址</text>
+      <input class='flex-1 cl' placeholder='请输入门店地址'></input>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1 flex-1'>地图定位</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+  </view>
+
+  <view class='modules bg-w m-b20'>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>负责人姓名</text>
+      <input class='flex-1 cl' placeholder='请输入负责人姓名'></input>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>ID号</text>
+      <input class='flex-1 cl' placeholder='请输入ID号'></input>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>店铺联系方式</text>
+      <input class='flex-1 cl' placeholder='请输入店铺联系方式'></input>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>联系方式</text>
+      <input class='flex-1 cl' placeholder='请输入联系方式'></input>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>验证码</text>
+      <input class='flex-1 cl' placeholder='请输入验证码'></input>
+    </view>
+  </view>
+
+  <view class='modules bg-w m-b20'>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>经营类目</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>经营品项</text>
+      <input class='flex-1 cl' placeholder='请输入经营品项'></input>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>商家简介</text>
+      <input class='flex-1 cl' placeholder='请输入商家简介'></input>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>店内服务</text>
+      <input class='flex-1 cl' placeholder='请输入店内服务'></input>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>营业时间</text>
+      <input class='flex-1 cl' placeholder='请输入营业时间'></input>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1 flex-1'>上传营业执照</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1 flex-1'>上传其他证照</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1 flex-1'>上传门头照</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1 flex-1'>上传店内照片</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+  </view>
+
+  <view class='modules bg-w'>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>推荐人ID号</text>
+      <input class='flex-1 cl' placeholder='请输入推荐人ID号'></input>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>推荐人姓名</text>
+      <input class='flex-1 cl' placeholder='请输入推荐人姓名'></input>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='m-r30'>推荐人联系方式</text>
+      <input class='flex-1 cl' placeholder='请输入推荐人联系方式'></input>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='flex-1'>优惠抵用金比例</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+  </view>
+
+  <button class='page-btn c-w f-r32 m-t30 m-b30'>提交申请</button>
+</view>

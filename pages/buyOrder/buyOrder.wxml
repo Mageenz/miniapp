@@ -1,0 +1,44 @@
+<view class='page-container'>
+  <view class='head'>
+    <view class='form-control m-b45'>
+      <view class='form-control-content flex'>
+        <view class='form-control-label f-r32 c-1'>消费金额：</view>
+        <view class='flex-1'>
+          <input placeholder='询问服务员后输入' class='input f-r32 c-3'></input>
+        </view>
+      </view>
+      <view class='tip f-r28 c-2 m-t20'>不参与优惠金额如：酒水、套餐等</view>
+    </view>
+    <view class='form-control'>
+      <view class='form-control-content flex'>
+        <view class='form-control-label f-r32 c-1'>不参与优惠金额：</view>
+        <view class='flex-1'>
+          <input placeholder='询问服务员后输入' class='input f-r32 c-3'></input>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='body'>
+    <view class='payway flex b-b'>
+      <image src='/assets/images/weixin-2@2x.png' class='icon-wx'></image>
+      <view class='f-r28 c-1 flex-1'>微信支付</view>
+      <image src='/assets/images/Group 4@2x.png' class='icon-check r'></image>
+    </view>
+    <view class='payway flex m-b50'>
+      <image src='/assets/images/zhifubao@2x.png' class='icon-ali'></image>
+      <view class='f-r28 c-1 flex-1'>支付宝支付</view>
+      <image src='/assets/images/Oval 4 Copy@2x.png' class='icon-check g'></image>
+    </view>
+    <view class='flex m-b10'>
+      <view class='f-m30 flex-1 c-1'>优惠抵用券：本次可抵30%</view>
+      <view class='f-m30 c-r'>¥120</view>
+    </view>
+    <view class='f-r24 c-2 m-b30'>您当前可用优惠券12500元</view>
+    <view class='flex m-b10 m-b117'>
+      <view class='f-m30 flex-1 c-1'>实付金额%</view>
+      <view class='f-m30 c-r'>¥120</view>
+    </view>
+    <button class='btn primary'>确认买单</button>
+  </view>
+</view>

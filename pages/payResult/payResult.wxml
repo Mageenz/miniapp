@@ -1,0 +1,7 @@
+<view>
+  <image src='/assets/images/chenggong@2x.png' class='icon-result'></image>
+  <!-- <image src='/assets/images/shibai@2x.png' class='icon-result'></image> -->
+  <view class='f-m36 ct'>恭喜你获得100积分600优惠金</view>
+  <button class='btn'>去查看</button>
+  <!-- <button class='btn'>重新支付</button> -->
+</view>

@@ -1,0 +1,11 @@
+.head {
+  background-color: #fff;
+}
+.icon-upload {
+  width: 130rpx;
+  height: 130rpx;
+  display: block;
+}
+.des {
+  height: 240rpx;
+}

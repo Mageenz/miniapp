@@ -1,0 +1,20 @@
+<view class='page-container'>
+  <view class='head ct'>
+    <view class='f-r28 c-1' style='margin-bottom:68rpx;'>确认支付金额</view>
+    <view class='f-m32 c-r' style='font-size: 52rpx;'>500.00元</view>
+  </view>
+  <view class='f-m30 c-1 p-l30 p-b30 b-b'>请选择支付方式</view>
+  <view class='body'>
+    <view class='payway flex b-b'>
+      <image src='/assets/images/weixin-2@2x.png' class='icon-wx'></image>
+      <view class='f-r28 c-1 flex-1'>微信支付</view>
+      <image src='/assets/images/Group 4@2x.png' class='icon-check r'></image>
+    </view>
+    <view class='payway flex' style='margin-bottom:117rpx;'>
+      <image src='/assets/images/zhifubao@2x.png' class='icon-ali'></image>
+      <view class='f-r28 c-1 flex-1'>支付宝支付</view>
+      <image src='/assets/images/Oval 4 Copy@2x.png' class='icon-check g'></image>
+    </view>
+    <button class='btn primary'>立即支付</button>
+  </view>
+</view>

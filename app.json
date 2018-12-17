@@ -1,7 +1,30 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/category/category"
+    "pages/search/search",
+    "pages/orderDetail/orderDetail",
+    "pages/buyOrder/buyOrder",
+    "pages/payResult/payResult",
+    "pages/myOrder/myOrder",
+    "pages/discuss/discuss",
+    "pages/my/my",
+    "pages/message/message",
+    "pages/personalSetting/personalSetting",
+    "pages/myWallet/myWallet",
+    "pages/scoreLogs/scoreLogs",
+    "pages/scoreExchange/scoreExchange",
+    "pages/scoreExchangeSuccess/scoreExchangeSuccess",
+    "pages/offerLogs/offerLogs",
+    "pages/vipJoin/vipJoin",
+    "pages/payConfirm/payConfirm",
+    "pages/buyOrderResult/buyOrderResult",
+    "pages/share/share",
+    "pages/shopJoin/shopJoin",
+    "pages/relationShip/relationShip",
+    "pages/vip/vip",
+    "pages/regionJoin/regionJoin",
+    "pages/cityJoin/cityJoin",
+    "pages/collections/collections"
   ],
   "window": {
     "backgroundTextStyle": "light",

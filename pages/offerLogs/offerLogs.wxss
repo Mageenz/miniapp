@@ -1,0 +1,15 @@
+.page-container {
+  padding: 0 30rpx;
+}
+.message {
+  padding: 30rpx 0;
+  border-bottom: 1rpx rgba(243, 243, 243, 1) solid;
+}
+.dot {
+  width: 20rpx;
+  height: 20rpx;
+}
+.icon-xl {
+  width: 28rpx;
+  height: 28rpx;
+}

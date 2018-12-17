@@ -16,7 +16,12 @@ Page({
       { name: '生活服务', src: '/assets/images/Oval Copy 5@2x.png' },
       { name: '百货商城', src: '/assets/images/Oval Copy 8@2x.png' },
       { name: '母婴亲子', src: '/assets/images/Oval Copy 6@2x.png' },
-      { name: '全部分类', src: '/assets/images/Oval Copy 7@2x.png' },
+      { name: '全部分类', src: '/assets/images/Oval Copy 7@2x.png', path: '/category' },
     ]
+  },
+  toCategory() {
+    wx.navigateTo({
+      url: '/pages/category/category',
+    })
   }
 })

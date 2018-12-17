@@ -1,0 +1,23 @@
+<view class='page-container p-30'>
+  <view class='cards flex ct'>
+    <view wx:for='{{cards}}' class='{{index == currentIndex ? "active card" : "card"}}' bindtap='chooseCard' data-index='{{index}}'>
+      <view class='f-r24 c-1' style='margin-bottom:8rpx'>普卡</view>
+      <view class='f-m28 c-1' style='margin-bottom:15rpx'>￥500.00</view>
+      <view class='f-r20 reward m-b10'>+200积分</view>
+      <view class='f-r20 reward'>+200优惠金</view>
+    </view>
+  </view>
+
+  <view class='f-r28 c-1 des'>含250积分，1积分=1元，价值250元 含600优惠抵用金，价值600元</view>
+
+  <view class='f-m32 c-r ct'>合计价值：850元</view>
+
+  <button class='btn-join c-w f-r32'>立即开通</button>
+
+  <view class='f-r28 c-3'>
+    <view class='f-r30 c-1 m-b30'>权益说明</view>
+    <view>1、会员购买VIP卡后，将获得优惠金和积分权益； </view>
+    <view>2、优惠金在智惠联盟商家处消费时，可根据商家优惠幅度抵扣优惠金额； </view>
+    <view>3、会员获赠的积分可享受更多增值权益。</view>
+  </view>
+</view>

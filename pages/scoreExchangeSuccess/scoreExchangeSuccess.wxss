@@ -1,0 +1,22 @@
+.head {
+  padding: 152rpx 0 50rpx 0;
+}
+.icon-result {
+  width: 128rpx;
+  height: 128rpx;
+  margin-bottom: 40rpx;
+}
+.btn-copy, .link {
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.link {
+  border:1px solid rgba(212,214,215,1);
+  box-sizing: border-box;
+}
+.btn-copy {
+  background:rgba(229,57,53,1);
+  color: #fff;
+  border-radius: 0;
+  border: 0;
+}

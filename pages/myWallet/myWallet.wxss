@@ -1,0 +1,10 @@
+.m-b60 {
+  margin-bottom: 60rpx;
+}
+.p-t50 {
+  padding-top: 50rpx;
+}
+.icon-link {
+  width: 180rpx;
+  height: 60rpx;
+}

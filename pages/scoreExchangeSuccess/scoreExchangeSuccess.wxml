@@ -1,0 +1,19 @@
+<view class='page-container'>
+  <view class='head bg-w ct' style='border-bottom:20rpx RGBA(243, 243, 243, 1) solid;'>
+    <image src='/assets/images/chenggong@2x.png' class='icon-result'></image>
+    <view class='f-m36' style='margin-bottom:124rpx;'>兑换成功</view>
+    <view class='f-r26 c-3 cl' style='margin-left:50rpx;'>
+      <view>温馨提示： </view>
+      <view>1.确认兑换后，您在U+智慧上的积分余额将归零； </view>
+      <view>2.兑换完成后，请在app上查看积余额；</view>
+    </view>
+  </view>
+
+  <view class='body bg-w' style='padding:40rpx;'>
+    <view class='flex' style='margin-bottom:50rpx;'>
+      <view class='flex-1 f-r28 c-3 link ct'>www.eqqadasdasdasd</view>
+      <button class='btn-copy'>复制</button>
+    </view>
+    <view class='f-r24 c-3'>复制以上地址，在手机浏览器中打开即可下载</view>
+  </view>  
+</view>

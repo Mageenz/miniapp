@@ -1,3 +1,7 @@
+.page-container {
+  background-color: #fff;
+  padding: 30rpx;
+}
 .searchbar {
   background-color: rgba(235, 235, 235, 1);
   border-radius: 36rpx;

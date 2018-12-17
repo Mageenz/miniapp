@@ -1,0 +1,14 @@
+<view class='page-container spec'>
+  <view class='head p-b30'>
+    <view class='flex p-30 b-b b-t'>
+      <text class='f-r30 c-1'>商家服务</text>
+      <view class='star'></view>
+    </view>
+    <view class='des p-t20 p-r30 p-l30 p-b30'>
+      <textarea class='textarea f-r24 c-3' placeholder='性价比如何？环境如何？服务周到吗？（写够15字才能获得奖励哦～）'></textarea>
+    </view>
+    <view class='upload'>
+      <image src='/assets/images/Group 3@2x.png' class='icon-upload m-l30'></image>
+    </view>
+  </view>
+</view>

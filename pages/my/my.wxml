@@ -1,0 +1,76 @@
+<view class='page-container spec'>
+  <view class='my-head m-b20' style='background-image:url(/assets/images/Rectangle3@2x.png)'>
+    <view class='flex ai-top'>
+      <image src='/assets/images/good.png' class='avator m-r30'></image>
+      <view class='flex-1'>
+        <view class='flex m-b20'>
+          <text class='f-r30 c-w' style='margin-right:100rpx;'>小星星</text>
+          <image src='/assets/images/Group 5@2x.png' class='level'></image>
+          <image src='/assets/images/Group 4@2x (1).png' class='level'></image>
+        </view>
+        <view class='f-r24 c-w'>ID：728238213</view>
+      </view>
+      <image src='/assets/images/myback.png' class='icon-go'></image>
+    </view>
+  </view>
+
+  <view class='body m-b20'>
+    <view class='modules'>
+      <view class='module flex p-r30 p-l30'>
+        <text class='flex-1 f-r30 c-1'>钱包</text>
+        <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      </view>
+    </view>
+    <view class='modules'>
+      <view class='module flex p-r30 p-l30'>
+        <text class='flex-1 f-r30 c-1'>分享/推荐</text>
+        <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      </view>
+    </view>
+    <view class='modules'>
+      <view class='module flex p-r30 p-l30'>
+        <text class='flex-1 f-r30 c-1'>人脉</text>
+        <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      </view>
+    </view>
+    <view class='modules'>
+      <view class='module flex p-r30 p-l30'>
+        <text class='flex-1 f-r30 c-1'>VIP</text>
+        <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      </view>
+    </view>
+    <view class='modules'>
+      <view class='module flex p-r30 p-l30'>
+        <text class='flex-1 f-r30 c-1'>收藏</text>
+        <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      </view>
+    </view>
+    <view class='modules'>
+      <view class='module flex p-r30 p-l30'>
+        <text class='flex-1 f-r30 c-1'>区县合伙人</text>
+        <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      </view>
+    </view>
+    <view class='modules'>
+      <view class='module flex p-r30 p-l30'>
+        <text class='flex-1 f-r30 c-1'>市级合伙人</text>
+        <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='body'>
+    <view class='modules'>
+      <view class='module flex p-r30 p-l30'>
+        <text class='flex-1 f-r30 c-1'>商家入驻</text>
+        <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      </view>
+    </view>
+    <view class='modules'>
+      <view class='module flex p-r30 p-l30'>
+        <text class='flex-1 f-r30 c-1'>商家管理</text>
+        <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      </view>
+    </view>
+  </view>
+</view>

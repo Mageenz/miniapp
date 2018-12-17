@@ -30,12 +30,144 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 22,
 			"list": [
 				{
 					"id": 0,
-					"name": "分类",
-					"pathName": "pages/category/category",
+					"name": "搜索页",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单详情",
+					"pathName": "pages/orderDetail/orderDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "买单",
+					"pathName": "pages/buyOrder/buyOrder",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "买单结果",
+					"pathName": "pages/payResult/payResult",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单",
+					"pathName": "pages/myOrder/myOrder",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "评价",
+					"pathName": "pages/discuss/discuss",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "我的",
+					"pathName": "pages/my/my",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "消息",
+					"pathName": "pages/message/message",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人设置",
+					"pathName": "pages/personalSetting/personalSetting",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人设置",
+					"pathName": "pages/myWallet/myWallet",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "积分明细",
+					"pathName": "pages/scoreLogs/scoreLogs",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "积分兑换",
+					"pathName": "pages/scoreExchange/scoreExchange",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "积分兑换成功",
+					"pathName": "pages/scoreExchangeSuccess/scoreExchangeSuccess",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "优惠金明细",
+					"pathName": "pages/offerLogs/offerLogs",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "开通会员",
+					"pathName": "pages/vipJoin/vipJoin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "支付确认",
+					"pathName": "pages/payConfirm/payConfirm",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分享、推荐",
+					"pathName": "pages/share/share",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "商家入驻",
+					"pathName": "pages/shopJoin/shopJoin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "人脉",
+					"pathName": "pages/relationShip/relationShip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "vip",
+					"pathName": "pages/vip/vip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "申请区县合伙人",
+					"pathName": "pages/regionJoin/regionJoin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "申请市级合伙人",
+					"pathName": "pages/cityJoin/cityJoin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "收藏",
+					"pathName": "pages/collections/collections",
 					"query": ""
 				}
 			]

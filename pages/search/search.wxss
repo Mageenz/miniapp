@@ -6,7 +6,7 @@
 .searchbar {
   justify-content: flex-start;
   background-color: #fff;
-  padding: 0 70rpx 13rpx 30rpx;
+  padding: 0 30rpx 13rpx 30rpx;
 }
 .fc-wrap {
   background:rgba(235,235,235,1);

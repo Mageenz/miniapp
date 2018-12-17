@@ -1,0 +1,55 @@
+<view class='page-container spec p-t20'>
+  <view class='bg-w m-b20'>
+    <view class='flex p-t20 p-b20 p-r30 p-l30 b-b'>
+      <text class='flex-1 f-r30 c-1'>头像</text>
+      <image src='/assets/images/good.png' class='avator m-r20'></image>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+    <view class='module flex b-b'>
+      <text class='f-r30 c-1 flex-1'>昵称</text>
+      <text class='f-r30 c-2 m-r20'>小王</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+    <view class='module flex b-b'>
+      <text class='f-r30 c-1 flex-1'>手机号码</text>
+      <text class='f-r30 c-2 m-r20'>1351231131</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+    <view class='module flex b-b'>
+      <text class='f-r30 c-1 flex-1'>性别</text>
+      <text class='f-r30 c-2 m-r20'>男</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+    <view class='module flex'>
+      <text class='f-r30 c-1 flex-1'>生日</text>
+      <text class='f-r30 c-2 m-r20'>1993-09-24</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+  </view>
+
+  <view class='bg-w m-b20'>
+    <view class='module flex b-b'>
+      <text class='f-r30 c-1 flex-1'>微信</text>
+      <text class='f-r30 c-2 m-r20'>去绑定/已绑定</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+    <view class='module flex'>
+      <text class='f-r30 c-1 flex-1'>支付宝</text>
+      <text class='f-r30 c-2 m-r20'>去绑定/已绑定</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+  </view>
+
+  <view class='bg-w'>
+    <view class='module flex b-b'>
+      <text class='f-r30 c-1 flex-1'>姓名</text>
+      <text class='f-r30 c-2 m-r20'>123213</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+    <view class='module flex'>
+      <text class='f-r30 c-1 flex-1'>身份证号码</text>
+      <text class='f-r30 c-2 m-r20'>123131231313</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+  </view>
+</view>

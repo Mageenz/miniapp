@@ -1,0 +1,91 @@
+<view class='page-container bg-g'>
+  <view class='p-30 bg-w ct c-w m-b30'>
+    <view class='colorblock cb-red'>
+      <view class='f-r24 m-b20'>累计积分收益（分）</view>
+      <view class='f-s50 m-b20'>123123.00</view>
+      <view class='flex p-30 b-t'>
+        <view class='flex-1'>
+          <view class='f-s30'>3400.00</view>
+          <view class='f-r24'>推荐奖励（分）</view>
+        </view>
+        <view class='bd'></view>
+        <view class='flex-1'>
+          <view class='f-s30'>3400.00</view>
+          <view class='f-r24'>团队奖励（分）</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='f-m30 f-bd p-l30 m-b30'>人脉圈</view>
+
+  <view class='p-l30 p-r30 f-r28 c-1 bg-w m-b20'>
+    <view class='flex p-t30 p-b30 b-b'>
+      <image src='/assets/images/good.png' class='avator m-r20'></image>
+      <text class='m-r30'>张安</text>
+      <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+      <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+    </view>
+    <view class='p-t30 p-b30'>
+      <view class='flex m-b20'>
+        <image src='/assets/images/good.png' class='avator m-r20'></image>
+        <text class='m-r30'>张安</text>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+      </view>
+      <view class='flex m-b20'>
+        <image src='/assets/images/good.png' class='avator m-r20'></image>
+        <text class='m-r30'>张安</text>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+      </view>
+      <view class='flex m-b20'>
+        <image src='/assets/images/good.png' class='avator m-r20'></image>
+        <text class='m-r30'>张安</text>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+      </view>
+      <view class='flex'>
+        <image src='/assets/images/good.png' class='avator m-r20'></image>
+        <text class='m-r30'>张安</text>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='p-l30 p-r30 f-r28 c-1 bg-w m-b20'>
+    <view class='flex p-t30 p-b30 b-b'>
+      <image src='/assets/images/good.png' class='avator m-r20'></image>
+      <text class='m-r30'>张安</text>
+      <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+      <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+    </view>
+    <view class='p-t30 p-b30'>
+      <view class='flex m-b20'>
+        <image src='/assets/images/good.png' class='avator m-r20'></image>
+        <text class='m-r30'>张安</text>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+      </view>
+      <view class='flex m-b20'>
+        <image src='/assets/images/good.png' class='avator m-r20'></image>
+        <text class='m-r30'>张安</text>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+      </view>
+      <view class='flex m-b20'>
+        <image src='/assets/images/good.png' class='avator m-r20'></image>
+        <text class='m-r30'>张安</text>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+      </view>
+      <view class='flex'>
+        <image src='/assets/images/good.png' class='avator m-r20'></image>
+        <text class='m-r30'>张安</text>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+      </view>
+    </view>
+  </view>
+</view>

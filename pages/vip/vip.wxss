@@ -1,0 +1,26 @@
+.page-head {
+  height:240rpx;
+  background:linear-gradient(180deg,rgba(243,95,92,1) 0%,rgba(229,57,53,1) 100%);
+  padding-top: 64rpx;
+  box-sizing: border-box;
+}
+.icon-star1 {
+  width: 44rpx;
+  height: 42rpx;
+  margin-right: 13rpx;
+}
+.page-btn {
+  width: 260rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.page-btn.btn1 {
+  color: rgba(229, 57, 53, 1);
+  border: 1rpx rgba(229, 57, 53, 1) solid;
+  background-color: transparent;
+}
+.page-btn.btn2 {
+  background-color: rgba(229, 57, 53, 1);
+  color: #fff;
+  border: none;
+}

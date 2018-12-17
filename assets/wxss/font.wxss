@@ -1,5 +1,8 @@
-.f-r22, .f-r24, .f-r26 {
+.f-r20, .f-r22, .f-r24, .f-r26, .f-r28, .f-r30 , .f-r32 {
   font-family:PingFangSC-Regular;
+}
+.f-r20 {
+  font-size: 20rpx;
 }
 .f-r22 {
   font-size: 22rpx;
@@ -10,8 +13,16 @@
 .f-r26 {
   font-size: 26rpx;
 }
-
-.f-m28, .f-m30, .f-m32 {
+.f-r28 {
+  font-size: 28rpx;
+}
+.f-r30 {
+  font-size: 30rpx;
+}
+.f-r32 {
+  font-size: 32rpx;
+}
+.f-m28, .f-m30, .f-m32, .f-m36 {
   font-family:PingFangSC-Medium;
   font-weight: bold;
   color:rgba(57,64,75,1);
@@ -25,7 +36,18 @@
 .f-m32 {
   font-size: 32rpx;
 }
-
+.f-m36 {
+  font-size: 36rpx;
+}
+.f-s30, .f-s50 {
+  font-family:PingFangSC-Semibold;
+}
+.f-s50 {
+  font-size: 50rpx;
+}
+.f-s30 {
+  font-size: 30rpx;
+}
 .c-1 {
   color: rgba(57, 64, 75, 1);
 }
@@ -35,6 +57,12 @@
 .c-3 {
   color: rgba(145, 153, 166, 1);
 }
+.c-4 {
+  color: rgba(103, 111, 115, 1);
+}
 .c-r {
   color: rgba(229, 57, 53, 1);
+}
+.c-w {
+  color: #fff;
 }

@@ -1,0 +1,77 @@
+<view class='page-container bg-g'>
+  <view class='page-head ct m-b20'>
+    <view class='m-b30'>
+      <image src='/assets/images/shoucang copy 4@2x.png' class='icon-star1'></image>
+      <image src='/assets/images/shoucang copy 4@2x.png' class='icon-star1'></image>
+      <image src='/assets/images/shoucang copy 4@2x.png' class='icon-star1'></image>
+      <image src='/assets/images/shoucang copy 4@2x.png' class='icon-star1'></image>
+      <image src='/assets/images/shoucang copy 4@2x.png' class='icon-star1'></image>
+    </view>
+    <view class='f-r28 c-w'>当前VIP等级</view>
+  </view>
+
+  <view class='page-body p-l30 p-r30 bg-w m-b20'>
+    <view class='levels'>
+      <view class='level p-t30 p-b30 b-b'>
+        <view class='f-m28 c-1 m-b10'>一星VIP</view>
+        <view class='f-r24 c-1'>
+          <view class='m-b10'>达成条件：12个自然月内开通会员卡消费达2000元。</view>
+          <view class='flex ai-top'>
+            <text>等级特权：</text>
+            <view>
+              <view class='m-b10'>1、推荐好友购买会员卡奖励好友积分额的4%；</view>
+              <view>2、团队奖励积分额的1%。</view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class='level p-t30 p-b30 b-b'>
+        <view class='f-m28 c-1 m-b10'>二星VIP</view>
+        <view class='f-r24 c-1'>
+          <view class='m-b10'>达成条件：12个自然月内开通会员卡消费达2000元。</view>
+          <view class='flex ai-top'>
+            <text>等级特权：</text>
+            <view>
+              <view class='m-b10'>1、推荐好友购买会员卡奖励好友积分额的4%；</view>
+              <view>2、团队奖励积分额的1%。</view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class='level p-t30 p-b30 b-b'>
+        <view class='f-m28 c-1 m-b10'>三星VIP</view>
+        <view class='f-r24 c-1'>
+          <view class='m-b10'>达成条件：12个自然月内开通会员卡消费达2000元。</view>
+          <view class='flex ai-top'>
+            <text>等级特权：</text>
+            <view>
+              <view class='m-b10'>1、推荐好友购买会员卡奖励好友积分额的4%；</view>
+              <view>2、团队奖励积分额的1%。</view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class='level p-t30 p-b30'>
+        <view class='f-m28 c-1 m-b10'>四星VIP</view>
+        <view class='f-r24 c-1'>
+          <view class='m-b10'>达成条件：12个自然月内开通会员卡消费达2000元。</view>
+          <view class='flex ai-top'>
+            <text>等级特权：</text>
+            <view>
+              <view class='m-b10'>1、推荐好友购买会员卡奖励好友积分额的4%；</view>
+              <view>2、团队奖励积分额的1%。</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='page-foot flex bg-w' style='padding:25rpx 0;'>
+    <button class='page-btn btn1 f-r28'>申请区县合伙人</button>
+    <button class='page-btn btn2 f-r28'>申请市级合伙人</button>
+  </view>
+</view>

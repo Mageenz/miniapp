@@ -1,0 +1,31 @@
+<view class='page-container bg-g p-t20'>
+  <view class='goods bg-w'>
+    <view class='good flex p-t20 p-b20 ai-top p-l30 p-r30 b-b'>
+      <image src='/assets/images/good.png' class='m-r20' style='width:160rpx;height:160rpx;'></image>
+      <view class='flex-1'>
+        <view class='f-m28 c-1 m-b30'>真好吃香肠</view>
+        <view class='f-r22 c-3 m-b10'>主营商品：是是是，是是是</view>
+        <view class='f-r22 c-3'>地址：答案是煎熬圣诞节爱神的箭奥德赛</view>
+      </view>
+      <image src='/assets/images/back.png' class='as-center' style='width:15rpx;height:25rpx;'></image>
+    </view>
+    <view class='good flex p-t20 p-b20 ai-top p-l30 p-r30 b-b'>
+      <image src='/assets/images/good.png' class='m-r20' style='width:160rpx;height:160rpx;'></image>
+      <view class='flex-1'>
+        <view class='f-m28 c-1 m-b30'>真好吃香肠</view>
+        <view class='f-r22 c-3 m-b10'>主营商品：是是是，是是是</view>
+        <view class='f-r22 c-3'>地址：答案是煎熬圣诞节爱神的箭奥德赛</view>
+      </view>
+      <image src='/assets/images/back.png' class='as-center' style='width:15rpx;height:25rpx;'></image>
+    </view>
+    <view class='good flex p-t20 p-b20 ai-top p-l30 p-r30 b-b'>
+      <image src='/assets/images/good.png' class='m-r20' style='width:160rpx;height:160rpx;'></image>
+      <view class='flex-1'>
+        <view class='f-m28 c-1 m-b30'>真好吃香肠</view>
+        <view class='f-r22 c-3 m-b10'>主营商品：是是是，是是是</view>
+        <view class='f-r22 c-3'>地址：答案是煎熬圣诞节爱神的箭奥德赛</view>
+      </view>
+      <image src='/assets/images/back.png' class='as-center' style='width:15rpx;height:25rpx;'></image>
+    </view>
+  </view>
+</view>

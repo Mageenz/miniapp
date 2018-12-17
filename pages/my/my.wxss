@@ -1,0 +1,31 @@
+.my-head {
+  padding: 157rpx 30rpx 30rpx 30rpx;
+  height: 307rpx;
+  box-sizing: border-box;
+  background-size: 100%;
+}
+.my-head .level {
+  width: 126rpx;
+  height: 56rpx;
+}
+.my-head .avator {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.my-head .icon-go {
+  width: 15rpx;
+  height: 25rpx;
+  align-self: center;
+}
+.body {
+  background-color: #fff;
+}
+.module {
+  height: 100rpx;
+  border-bottom: 1rpx rgba(221, 221, 221, 1) solid;
+}
+.module .icon-go {
+  width: 15rpx;
+  height: 28rpx;
+}

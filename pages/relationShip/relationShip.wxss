@@ -1,0 +1,9 @@
+.avator {
+  width: 80rpx;
+  height: 80rpx;
+}
+.tag {
+  width: 126rpx;
+  height: 56rpx;
+  margin-right: 14rpx;
+}

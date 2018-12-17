@@ -1,0 +1,29 @@
+.head {
+  padding: 99rpx 0 50rpx 0;
+}
+.page-btn {
+  width: 500rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: transparent;
+}
+.page-btn.no {
+  background-color: transparent;
+}
+.page-btn.yes {
+  background-color: rgba(229, 57, 53, 1);
+}
+.btn-copy, .link {
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.link {
+  border:1px solid rgba(212,214,215,1);
+  box-sizing: border-box;
+}
+.btn-copy {
+  background:rgba(229,57,53,1);
+  color: #fff;
+  border-radius: 0;
+  border: 0;
+}

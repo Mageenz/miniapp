@@ -1,0 +1,41 @@
+<view class='page-container spec'>
+  <view class='head flex ct f-r26 c-1 p-t30 bg-w p-b30 m-b20'>
+    <view class='flex-1'>
+      <image src='/assets/images/Group Copy@2x.png' class='page-image1'></image>
+      <view class='m-b10'>新注册会员</view>
+      <view>赠送10元优惠金</view>
+    </view>
+    <view class='page-bd'></view>
+    <view class='flex-1'>
+      <image src='/assets/images/Group 4@2x (3).png' class='page-image2'></image>
+      <view class='m-b10'>新注册会员</view>
+      <view>赠送10元优惠金</view>
+    </view>
+  </view>
+
+  <view class='modules bg-w m-b20'>
+    <view class='module flex p-r30 p-l30'>
+      <image src='/assets/images/Page 1@2x.png' class='page-icon'></image>
+      <text class='flex-1 f-r30 c-1'>邀请微信好友</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <image src='/assets/images/Page 1@2x (1).png' class='page-icon'></image>
+      <text class='flex-1 f-r30 c-1'>钱包</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <image src='/assets/images/二维码@2x.png' class='page-icon'></image>
+      <text class='flex-1 f-r30 c-1'>钱包</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+  </view>
+
+  <view class='modules bg-w'>
+    <view class='module flex p-r30 p-l30'>
+      <text class='flex-1 f-r30 c-1'>推荐商家入驻</text>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+    <view class='page-tip f-r26 c-2 p-t20 p-l30 p-b20'>商家入驻成功，每笔消费推荐人均有积分奖励</view>
+  </view>
+</view>

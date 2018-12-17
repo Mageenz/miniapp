@@ -20,7 +20,7 @@
       </view>
     </view>
     <view class='categorys flex'>
-      <view class='item' wx:for='{{categorys2}}'>
+      <view class='item' wx:for='{{categorys2}}' bindtap='toCategory'>
         <image src='{{item.src}}' class='image'></image>
         <view class='f-r26 c-1'>{{item.name}}</view>
       </view>

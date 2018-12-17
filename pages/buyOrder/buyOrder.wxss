@@ -1,0 +1,52 @@
+.page-container {
+  background-color: RGBA(243, 243, 243, 1);
+  padding: 0;
+  min-height: 100vh;
+}
+.form-control .form-control-content {
+  height:120rpx;
+  background:rgba(247,247,247,1);
+  border-radius:6rpx;
+  border:1rpx solid rgba(229,57,53,1);
+  padding: 0 30rpx;
+}
+.form-control .form-control-label {
+  text-align: right;
+}
+.form-control .input {
+  text-align: right;
+}
+.form-control .tip {
+  color: rgba(126, 134, 147, 1);
+}
+.m-b45 {
+  margin-bottom: 45rpx;
+}
+.m-b50 {
+  margin-bottom: 50rpx;
+}
+.m-b117 {
+  margin-bottom: 117rpx;
+}
+.head {
+  background-color: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+.body {
+  background-color: #fff;
+  padding: 0 30rpx;
+  padding-bottom: 128rpx;
+}
+.payway {
+  padding: 30rpx 0;
+}
+.payway .icon-wx, .payway .icon-ali {
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 20rpx;
+}
+.payway .icon-check {
+  width: 32rpx;
+  height: 32rpx;
+}

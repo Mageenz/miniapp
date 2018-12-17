@@ -2,10 +2,12 @@
 @import "assets/wxss/length.wxss";
 
 .page-container {
-  padding: 30rpx;
   box-sizing: border-box;
+  min-height: 100vh;
 }
-
+.page-container.spec {
+  background-color: RGBA(243, 243, 243, 1);
+}
 .icon-search {
   width: 32rpx;
   height: 32rpx;
@@ -16,14 +18,95 @@
   height: 25rpx;
   margin-right: 25rpx;
 }
+.icon-go {
+  width: 15rpx;
+  height: 28rpx;
+}
+.b-t {
+  border-top: 1rpx RGBA(221, 221, 221, 1) solid;
+}
+.b-b {
+  border-bottom: 1rpx RGBA(221, 221, 221, 1) solid;
+}
+.b-red {
+  border: 1rpx rgba(229, 57, 53, 1) solid;
+}
 .ct {
   text-align: center;
+}
+.cr {
+  text-align: right;
+}
+.cl {
+  text-align: left;
 }
 .flex {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+}
+.flex.ai-top {
+  align-items: flex-start
+}
+.as-center {
+  align-self: center;
 }
 .flex-1 {
   flex: 1;
+}
+.btn {
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 50rpx;
+  border: 0;
+  font-family:PingFangSC-Medium;
+  font-size: 36rpx;
+  text-align: center;
+}
+.btn.primary {
+  background-color: rgba(229, 57, 53, 1);
+  color: #fff;
+}
+.lh1 {
+  line-height: 1;
+}
+.bg-w {
+  background-color: #fff;
+}
+.bg-g {
+  background-color: RGBA(243, 243, 243, 1);
+}
+.colorblock {
+  padding: 30rpx 45rpx 0 45rpx;
+  height: 310rpx;
+  border-radius:20rpx 20rpx 0rpx 0rpx;
+}
+.colorblock .bd {
+  width:1rpx;
+  height:50rpx;
+  background:rgba(255,255,255,1);
+  opacity:0.3;
+}
+.colorblock .b-t {
+  border-top: 1rpx RGBA(235, 100, 97, 1) solid;
+}
+.cb-red {
+  background:linear-gradient(155deg,rgba(243,95,91,1) 0%,rgba(229,57,53,1) 100%);
+}
+.cb-blue {
+  background: RGBA(117, 194, 255, 1);
+}
+.colorblock.cb-blue .b-t {
+  border-top: 1rpx RGBA(147, 207, 254, 1) solid;
+}
+.module {
+  height: 100rpx;
+  border-bottom: 1rpx rgba(221, 221, 221, 1) solid;
+}
+.module .icon-go {
+  width: 15rpx;
+  height: 28rpx;
+}
+.module .fc {
+  height: 30rpx;
 }
