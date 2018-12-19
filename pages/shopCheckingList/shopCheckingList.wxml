@@ -1,0 +1,31 @@
+<view class='page-container bg-g'>
+  <view class='bg-w'>
+    <view class='tabs f-r30 c-1'>
+      <view class='tabs-heads flex'>
+        <view class='tabs-head'>待审核商家</view>
+        <view class='tabs-head active'>已审核商家</view>
+      </view>
+    </view>
+
+    <view class='filters flex bg-g f-r26'>
+      <picker value='{{region}}' mode='region'>
+        <view class='c-1'>浙江杭州西湖区</view>
+      </picker>
+      <image src='/assets/images/Path 2@2x.png' class='icon-page'></image>
+      <view class='bd'></view>
+      <input class='flex-1 c-2' placeholder='搜索商家名称'></input>
+    </view>
+
+    <view class='shops'>
+      <view class='shop flex bg-w ai-top b-b' wx:for='{{3}}'>
+        <image src='/assets/images/good.png' class='good-image'></image>
+        <view class='flex-1'>
+          <view class='f-m28 c-1 m-b20'>傻大姐爱打架</view>
+          <view class='f-r22 c-3'>地址：123奥术大师大</view>
+          <view class='f-r22 c-3'>联系方式：123奥术大师大</view>
+        </view>
+        <image src='/assets/images/back.png' class='icon-back'></image>
+      </view>
+    </view>
+  </view>
+</view>

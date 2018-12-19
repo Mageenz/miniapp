@@ -24,7 +24,22 @@
     "pages/vip/vip",
     "pages/regionJoin/regionJoin",
     "pages/cityJoin/cityJoin",
-    "pages/collections/collections"
+    "pages/collections/collections",
+    "pages/regionInfo/regionInfo",
+    "pages/cityOverview/cityOverview",
+    "pages/regionOverview/regionOverview",
+    "pages/shopChecking/shopChecking",
+    "pages/shopCheckingList/shopCheckingList",
+    "pages/shopInfo/shopInfo",
+    "pages/shopLogs/shopLogs",
+    "pages/relationShipInfo/relationShipInfo",
+    "pages/shopAdmin/shopAdmin",
+    "pages/staffList/staffList",
+    "pages/receiptWaySetting/receiptWaySetting",
+    "pages/couponExchange/couponExchange",
+    "pages/takeoutCash/takeoutCash",
+    "pages/contact/contact",
+    "pages/businessReport/businessReport"
   ],
   "window": {
     "backgroundTextStyle": "light",

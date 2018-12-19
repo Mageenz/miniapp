@@ -1,0 +1,4 @@
+.page-title {
+  height: 100rpx;
+  text-align: center;
+}

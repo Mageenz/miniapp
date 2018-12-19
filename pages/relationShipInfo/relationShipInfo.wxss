@@ -1,0 +1,19 @@
+.avator {
+  width: 80rpx;
+  height: 80rpx;
+}
+.tag {
+  width: 126rpx;
+  height: 56rpx;
+  margin-right: 14rpx;
+}
+.relations {
+  border-top: 1rpx rgba(221, 221, 221, 1) solid;
+}
+.relation {
+  padding-top: 38rpx;
+  padding-bottom: 29rpx;
+}
+.br {
+  border-right: 1rpx rgba(221, 221, 221, 1) solid;
+}

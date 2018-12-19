@@ -1,0 +1,15 @@
+.label1 {
+  width: 180rpx;
+}
+.page-btn {
+  width:690rpx;
+  height:100rpx;
+  line-height: 100rpx;
+  background:rgba(229,57,53,1);
+  border-radius:6rpx;
+}
+.good-image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+}

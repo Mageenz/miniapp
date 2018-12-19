@@ -1,0 +1,58 @@
+<view class='page-container f-r30 c-1 bg-g'>
+  <view class='modules bg-w'>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>店名</text>
+      <text>大浪淘沙洗浴会所</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>店主姓名</text>
+      <text>张三</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>联系方式</text>
+      <text>13512313</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>店铺联系方式</text>
+      <text>13512313</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>经营类目</text>
+      <text>13512313</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>经营品项</text>
+      <text>13512313</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>优惠金比例</text>
+      <text>13512313</text>
+    </view>
+    <view class='b-b flex p-r30 p-l30 p-t20 p-b20'>
+      <text class='label1'>商家图片</text>
+      <image src='/assets/images/good.png' class='good-image'></image>
+      <image src='/assets/images/good.png' class='good-image'></image>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>推荐人</text>
+      <text>213</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>推荐人ID号</text>
+      <text>13512313</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>所属城市</text>
+      <text>13512313</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>经营地址</text>
+      <text>13512313</text>
+    </view>
+  </view>
+
+  <view class='flex bg-w page-foot'>
+      <button class='page-btn c-r f-r28'>确认修改</button>
+      <button class='page-btn c-w f-r28'>审核通过</button>
+  </view>
+</view>

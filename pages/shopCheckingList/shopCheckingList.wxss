@@ -1,0 +1,38 @@
+.tabs-heads {
+  justify-content: space-around;
+}
+.tabs-head {
+  border-bottom: 4rpx #fff solid;
+  padding-top: 30rpx;
+  padding-bottom: 24rpx;
+}
+.tabs-head.active {
+  border-bottom: 4rpx rgba(229, 57, 53, 1) solid;
+  color: rgba(229, 57, 53, 1);
+}
+.filters {
+  border-radius: 35rpx;
+  margin: 20rpx 30rpx 30rpx 30rpx;
+  padding: 0 30rpx;
+  height: 70rpx;
+}
+.icon-page {
+  width: 21rpx;
+  height: 12rpx;
+  margin-left: 9rpx;
+  margin-right: 10rpx;
+}
+.bd {
+  width:2rpx;
+  height:40rpx;
+  background-color: rgba(168,173,175,1);
+  margin-right: 20rpx;
+}
+.shop {
+  padding: 20rpx 30rpx 30rpx 30rpx;
+}
+.good-image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+}

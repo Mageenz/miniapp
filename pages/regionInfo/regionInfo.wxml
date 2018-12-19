@@ -1,0 +1,64 @@
+<view class='page-container bg-g'>
+  <view class='bg-w m-b20 f-r26 c-1 ct p-l30 p-r30 b-b' style='padding-top:50rpx'>
+    <view class='b-b' style='padding-bottom:39rpx;'>
+      <view class='m-b20'>累计收入积分（分）</view>
+      <view class='f-m30'>123213</view>
+    </view>
+    <view class='flex' style='padding-top:39rpx; padding-bottom:39rpx;'>
+      <view class='flex-1'>
+        <view class='m-b20'>拓展商家数（个）</view>
+        <view class='f-m30'>123213</view>
+      </view>
+      <view class='flex-1'>
+        <view class='m-b20'>直推会员数（个）</view>
+        <view class='f-m30'>123213</view>
+      </view>
+    </view>
+  </view>
+  <view class='module bg-w flex p-l30 p-r30 m-b20'>
+    <text class='f-r30 c-1 flex-1'>城市概况</text>
+    <picker mode='region' value='{{region}}' class='m-r20'>
+      <view class='f-r30 c-2'>{{region}}</view>
+    </picker>
+    <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+  </view>
+
+  <view class='bg-w ct f-r26 c-1 m-b20'>
+    <view class='p-30 f-s30 b-b'>商家管理</view>
+    <view class='flex'>
+      <view class='flex-1 flex page-link br'>
+        <image src='/assets/images/ruzhushenhe@2x.png' class='page-icon'></image>
+        <text>入驻审核</text>
+      </view>
+      <view class='flex-1 flex page-link'>
+        <image src='/assets/images/ruzhushenhe@2x.png' class='page-icon'></image>
+        <text>经营概况 </text>
+      </view>
+    </view>
+  </view>
+
+  <view class='bg-w ct f-r26 c-1 m-b20'>
+    <view class='p-30 f-s30 b-b'>会员管理</view>
+    <view class='flex'>
+      <view class='flex-1 flex page-link br'>
+        <image src='/assets/images/wsmp-contacts@2x.png' class='page-icon'></image>
+        <text>人脉详情</text>
+      </view>
+      <view class='flex-1 flex page-link'>
+        <image src='/assets/images/quyu@2x.png' class='page-icon'></image>
+        <text>区域概况  </text>
+      </view>
+    </view>
+  </view>
+
+  <view class='bg-w ct f-r26 c-1'>
+    <view class='p-30 f-s30 b-b'>合伙人收益</view>
+    <view class='f-r24 c-2 p-30 cl'>
+      <view class='m-b20'>成为区县合伙人后，收益如下： </view>
+      <view class='m-b10'>一、推荐奖：根据您的VIP级别，可获得4-10%的积分奖励，奖励 即时到帐； 举例：你是四星VIP，推荐奖为10%；推荐的朋友购买了钻石会员 卡，获得了8000积分，您的奖励为：8000×10%=800积分； </view>
+      <view class='m-b10'>二、团队奖：根据您的VIP级别，可获得四度人脉所有购买额的 1-4%积分奖励，奖励即时到帐； </view>
+      <view>三、代理分润：在您代理区域内产生的每一笔交易，均可分润。以积分形式奖励，每笔奖励好时到帐。具体的分润标准如下： 优惠抵用金×权重×5% </view>
+    </view>
+  </view>
+
+</view>

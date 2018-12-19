@@ -1,0 +1,35 @@
+<view class='page-container bg-g'>
+  <view class='date flex bg-w'>
+    <picker mode='time' class='flex-1'>
+      <view class='f-r28 c-1'>2018-12-12</view>
+    </picker>
+    <image src='/assets/images/back.png' class='icon-back'></image>
+  </view>
+  <view class='bg-w p-t20'>
+    <view class='filters flex bg-g f-r26'>
+      <picker value='{{region}}' mode='region'>
+        <view class='c-1'>浙江杭州西湖区</view>
+      </picker>
+      <image src='/assets/images/Path 2@2x.png' class='icon-page'></image>
+      <view class='bd'></view>
+      <input class='flex-1 c-2' placeholder='搜索商家名称'></input>
+    </view>
+
+    <view class='shops'>
+      <view class='shop flex bg-w ai-top b-b' wx:for='{{3}}'>
+        <image src='/assets/images/good.png' class='good-image'></image>
+        <view class='flex-1'>
+          <view class='f-m28 c-1 m-b20'>傻大姐爱打架</view>
+          <view class='f-r22 c-3 flex m-b10'>
+            <text>销售：</text>
+            <text class='f-m26 m-r30'>123笔</text>
+            <text>优惠额：</text>
+            <text>12313元</text>
+          </view>
+          <view class='f-r22 c-3'>销售额：123奥术大师大</view>
+        </view>
+        <image src='/assets/images/back.png' class='icon-back'></image>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<view class='page-container bg-g c-1'>
+  <view class='page-title flex bg-w'>
+    <text class='flex-1 f-r30'>今日报表</text>
+  </view>
+
+  <view class='f-r26'>
+    
+  </view>
+</view>

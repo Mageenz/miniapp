@@ -1,0 +1,32 @@
+.date {
+  height: 100rpx;
+  margin-bottom: 20rpx;
+  padding: 0 30rpx;
+  border-top: 1rpx RGBA(133, 133, 133, 1) solid;
+}
+.filters {
+  border-radius: 35rpx;
+  margin: 0 30rpx 30rpx 30rpx;
+  padding: 0 30rpx;
+  height: 70rpx;
+}
+.icon-page {
+  width: 21rpx;
+  height: 12rpx;
+  margin-left: 9rpx;
+  margin-right: 10rpx;
+}
+.bd {
+  width:2rpx;
+  height:40rpx;
+  background-color: rgba(168,173,175,1);
+  margin-right: 20rpx;
+}
+.shop {
+  padding: 20rpx 30rpx 30rpx 30rpx;
+}
+.good-image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+}

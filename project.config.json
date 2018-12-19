@@ -9,7 +9,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.94",
-	"appid": "wxba4ffa5db93bdaaa",
+	"appid": "wxa02503f55a406752",
 	"projectname": "wx-miniapp",
 	"isGameTourist": false,
 	"condition": {
@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 22,
+			"current": 38,
 			"list": [
 				{
 					"id": 0,
@@ -168,6 +168,102 @@
 					"id": -1,
 					"name": "收藏",
 					"pathName": "pages/collections/collections",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "区县合伙人",
+					"pathName": "pages/regionInfo/regionInfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "城市概况",
+					"pathName": "pages/cityOverview/cityOverview",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "区域概况",
+					"pathName": "pages/regionOverview/regionOverview",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "商家审核",
+					"pathName": "pages/shopChecking/shopChecking",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "入驻审核",
+					"pathName": "pages/shopCheckingList/shopCheckingList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "商家信息",
+					"pathName": "pages/shopInfo/shopInfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "历史汇总",
+					"pathName": "pages/shopLogs/shopLogs",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "人脉详情",
+					"pathName": "pages/relationShipInfo/relationShipInfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "商家后台",
+					"pathName": "pages/shopAdmin/shopAdmin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "员工管理",
+					"pathName": "pages/staffList/staffList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "收款方式设置",
+					"pathName": "pages/receiptWaySetting/receiptWaySetting",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "优惠金兑换",
+					"pathName": "pages/couponExchange/couponExchange",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "提现",
+					"pathName": "pages/takeoutCash/takeoutCash",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "联系",
+					"pathName": "pages/contact/contact",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "经营报表",
+					"pathName": "pages/businessReport/businessReport",
 					"query": ""
 				}
 			]

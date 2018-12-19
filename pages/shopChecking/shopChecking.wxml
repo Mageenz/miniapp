@@ -1,0 +1,64 @@
+<view class='page-container f-r30 c-1 bg-g'>
+  <view class='modules bg-w'>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>店名</text>
+      <text>大浪淘沙洗浴会所</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>店主姓名</text>
+      <text>张三</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>联系方式</text>
+      <text>13512313</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>店铺联系方式</text>
+      <text>13512313</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>经营类目</text>
+      <text>13512313</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>经营品项</text>
+      <text>13512313</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>优惠金比例</text>
+      <text>13512313</text>
+    </view>
+    <view class='b-b flex p-r30 p-l30 p-t20 p-b20'>
+      <text class='label1'>商家图片</text>
+      <image src='/assets/images/good.png' class='good-image'></image>
+      <image src='/assets/images/good.png' class='good-image'></image>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>推荐人</text>
+      <text>213</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>推荐人ID号</text>
+      <text>13512313</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>所属城市</text>
+      <text>13512313</text>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='label1'>经营地址</text>
+      <text>13512313</text>
+    </view>
+  </view>
+
+  <view class='f-r24 c-3 p-30'>
+    <view>以上为待审核商家，经过您的考察审核后，该商家将正式上线。请按以下程序完成审核：</view>
+    <view>1、实地走访，现场勘察； </view>
+    <view>2、核对营业执照、经营许可证； </view>
+    <view>3、核对店名、店招、地址、地图定位、上传图片； </view>
+    <view>4、核对店主或负责人联系方式； </view>
+    <view>5、现场扫码付款，小额验证支付是否正常。</view>
+  </view>
+
+  <button class='page-btn c-w f-r32 m-t30 m-b30'>审核通过</button>
+</view>

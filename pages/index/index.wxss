@@ -32,6 +32,7 @@
 .categorys .image {
   width: 100rpx;
   height: 100rpx;
+  border-radius: 50%;
 }
 
 .hot-wrap {
@@ -39,6 +40,7 @@
 }
 .hot-title {
   margin-bottom: 25rpx;
+  justify-content: center;
 }
 .hot-filters .item{
   width: 25%;

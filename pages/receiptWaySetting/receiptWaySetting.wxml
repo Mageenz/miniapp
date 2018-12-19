@@ -1,0 +1,14 @@
+<view class='page-container f-r30 c-1 bg-g p-t20'>
+  <view class='modules bg-w'>
+    <view class='module flex p-r30 p-l30'>
+      <text class='flex-1'>微信</text>
+      <view class='c-2 m-r20'>去绑定/已绑定</view>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+    <view class='module flex p-r30 p-l30'>
+      <text class='flex-1'>支付宝</text>
+      <view class='c-2 m-r20'>去绑定/已绑定</view>
+      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    </view>
+  </view>
+</view>

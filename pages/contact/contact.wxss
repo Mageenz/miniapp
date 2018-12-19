@@ -1,0 +1,16 @@
+.page-head {
+  height:154rpx;
+  background:linear-gradient(180deg,rgba(243,95,91,1) 0%,rgba(229,57,53,1) 100%);
+}
+.page-body {
+  height:308rpx;
+  background:rgba(255,255,255,1);
+  padding-top: 27rpx;
+  text-align: center;
+}
+.page-icon {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+}

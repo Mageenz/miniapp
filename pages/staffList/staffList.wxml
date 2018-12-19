@@ -1,0 +1,30 @@
+<view class='page-container bg-g f-r28 c-1'>
+  <view class='bg-w staffs p-l30'>
+    <view class='staff flex ai-top p-t20 p-b20 b-b' wx:for='{{3}}'>
+      <text style='margin-right:85rpx'>小哥</text>
+      <view class=''>
+        <view class='m-b20'>手机号：135123123</view>
+        <view>ID号：123</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='flex page-btn m-t20 bg-w'>
+    <image src='/assets/images/Rectangle 4 Copy@2x.png' class='page-icon m-r20'></image>
+    <text>新增</text>
+  </view>
+
+  <view class='dialog-mask'></view>
+  <view class='dialog-content f-r32'>
+    <view class='fc flex'>
+      <input placeholder='请输入员工姓名'></input>
+    </view>
+    <view class='fc flex'>
+      <input placeholder='请输入员工手机号'></input>
+    </view>
+    <view class='fc flex'>
+      <input placeholder='请输入员工ID号'></input>
+    </view>
+    <button class='dialog-btn'>确认添加</button>
+  </view>
+</view>

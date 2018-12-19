@@ -1,0 +1,24 @@
+.label1 {
+  width: 180rpx;
+}
+.page-btn {
+  width:260rpx;
+  height:70rpx;
+  line-height: 70rpx;
+  background:rgba(229,57,53,1);
+  border-radius:6rpx;
+}
+.page-btn.c-r {
+  background-color: #fff;
+  border:1rpx solid rgba(229,57,53,1);
+}
+.good-image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+}
+.page-foot {
+  padding: 25rpx;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
