@@ -1,28 +1,27 @@
-<view class='page-container bg-g'>
+<view class='page-container bg-g' wx:if='{{info}}'>
   <view class='bg-w m-b20 f-r26 c-1 ct p-l30 p-r30 b-b' style='padding-top:50rpx'>
     <view class='b-b' style='padding-bottom:39rpx;'>
       <view class='m-b20'>累计收入积分（分）</view>
-      <view class='f-m30'>123213</view>
+      <view class='f-m30'>{{info.totalPoints}}</view>
     </view>
     <view class='flex' style='padding-top:39rpx; padding-bottom:39rpx;'>
       <view class='flex-1'>
         <view class='m-b20'>拓展商家数（个）</view>
-        <view class='f-m30'>123213</view>
+        <view class='f-m30'>{{info.businessCounts}}</view>
       </view>
       <view class='flex-1'>
         <view class='m-b20'>直推会员数（个）</view>
-        <view class='f-m30'>123213</view>
+        <view class='f-m30'>{{info.memberCounts}}</view>
       </view>
     </view>
   </view>
-  <view class='module bg-w flex p-l30 p-r30 m-b20'>
-    <text class='f-r30 c-1 flex-1'>城市概况</text>
-    <picker mode='region' value='{{region}}' class='m-r20'>
-      <view class='f-r30 c-2'>{{region}}</view>
-    </picker>
-    <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
-  </view>
-
+  <navigator hover-class='hoverClass' url='/pages/cityOverview/cityOverview'>
+    <view class='module bg-w flex p-l30 p-r30 m-b20'>
+      <text class='f-r30 c-1 flex-1'>城市概况</text>
+      <view class='f-r30 c-2 m-r20'>{{info.provName}} {{info.cityName}} {{info.areaName}}</view>
+      <image src='/assets/images/go.png' class='icon-go'></image>
+    </view>
+  </navigator>
   <view class='bg-w ct f-r26 c-1 m-b20'>
     <view class='p-30 f-s30 b-b'>商家管理</view>
     <view class='flex'>
@@ -30,10 +29,10 @@
         <image src='/assets/images/ruzhushenhe@2x.png' class='page-icon'></image>
         <text>入驻审核</text>
       </view>
-      <view class='flex-1 flex page-link'>
+      <navigator class='flex-1 flex page-link' hover-class='hoverClass' url='/pages/regionOverview/regionOverview'>
         <image src='/assets/images/ruzhushenhe@2x.png' class='page-icon'></image>
         <text>经营概况 </text>
-      </view>
+      </navigator>
     </view>
   </view>
 

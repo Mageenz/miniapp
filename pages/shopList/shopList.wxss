@@ -1,0 +1,27 @@
+.hot-filters .item{
+  width: 25%;
+}
+.hot-filters .bd {
+  width: 0;
+  height: 24rpx;
+  border-right: 2rpx rgba(168, 173, 175, 1) solid;
+}
+.good-list {
+  margin-top: 20rpx;
+}
+.good-list .item {
+  padding: 30rpx 0;
+  justify-content: flex-start;
+  border-top: 1rpx rgba(221, 221, 221, 1) solid;
+}
+.good-list .image {
+  width: 160rpx;
+  height: 160rpx;
+}
+.hot-filters text {
+  display: block;
+  width: 100%;
+}
+.hot-filters text.active {
+  font-weight: bold;
+}

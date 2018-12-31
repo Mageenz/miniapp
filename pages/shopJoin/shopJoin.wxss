@@ -5,6 +5,14 @@
   width:690rpx;
   height:100rpx;
   line-height: 100rpx;
-  background:rgba(229,57,53,1);
+  background:rgba(229,57,53,1) !important;
   border-radius:6rpx;
+  color: #fff !important;
+}
+.page-btn[disabled] {
+  opacity: 0.6;
+}
+.code-btn {
+  background-color: #E53935;
+  color: #fff;
 }

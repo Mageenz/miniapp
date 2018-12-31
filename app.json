@@ -2,7 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/search/search",
-    "pages/orderDetail/orderDetail",
+    "pages/shopDetail/shopDetail",
     "pages/buyOrder/buyOrder",
     "pages/payResult/payResult",
     "pages/myOrder/myOrder",
@@ -39,12 +39,50 @@
     "pages/couponExchange/couponExchange",
     "pages/takeoutCash/takeoutCash",
     "pages/contact/contact",
-    "pages/businessReport/businessReport"
+    "pages/businessReport/businessReport",
+    "pages/shopList/shopList",
+    "pages/login/login",
+    "pages/upload/upload",
+    "pages/register/register"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": true,
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "U+商城",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#D61E07",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "智慧",
+        "iconPath": "/assets/images/sy-g.png",
+        "selectedIconPath": "/assets/images/sy-r.png"
+      },
+      {
+        "pagePath": "pages/myOrder/myOrder",
+        "text": "订单",
+        "iconPath": "/assets/images/dd-g.png",
+        "selectedIconPath": "/assets/images/dd-r.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/assets/images/my-g.png",
+        "selectedIconPath": "/assets/images/my-r.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置将用于查找附近的商家"
+    }
+  },
+  "usingComponents": {
+    "nodata": "/components/nodata/nodata"
   }
 }

@@ -1,0 +1,4 @@
+.page-image {
+  width: 130rpx;
+  height: 130rpx;
+}

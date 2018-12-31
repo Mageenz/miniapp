@@ -1,6 +1,6 @@
 <view class='page-container bg-g'>
   <view class='date flex bg-w'>
-    <picker mode='time' class='flex-1'>
+    <picker mode='date' class='flex-1' value='{{date}}' bindchange='handleDateChange'>
       <view class='f-r28 c-1'>2018-12-12</view>
     </picker>
     <image src='/assets/images/back.png' class='icon-back'></image>
@@ -8,7 +8,7 @@
   <view class='bg-w p-t20'>
     <view class='filters flex bg-g f-r26'>
       <picker value='{{region}}' mode='region'>
-        <view class='c-1'>浙江杭州西湖区</view>
+        <view class='c-1'>{{region[0]}} {{region[1]}} {{region[2]}}</view>
       </picker>
       <image src='/assets/images/Path 2@2x.png' class='icon-page'></image>
       <view class='bd'></view>
@@ -28,7 +28,7 @@
           </view>
           <view class='f-r22 c-3'>销售额：123奥术大师大</view>
         </view>
-        <image src='/assets/images/back.png' class='icon-back'></image>
+        <image src='/assets/images/back.png' class='icon-back as-center'></image>
       </view>
     </view>
   </view>

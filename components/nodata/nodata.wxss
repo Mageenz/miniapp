@@ -1,0 +1,13 @@
+.f-r28 {
+  font-size: 28rpx;
+  font-family:PingFangSC-Regular;
+}
+.p-30 {
+  padding: 30rpx;
+}
+.ct {
+  text-align: center;
+}
+.c-2 {
+  color: rgba(88, 96, 107, 1);
+}

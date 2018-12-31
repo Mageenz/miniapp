@@ -1,33 +1,21 @@
-<view class='page-container bg-g'>
-  <view class='f-s30 p-30'>代理城市一：浙江省杭州市西湖区</view>
-  <view class='flex bg-w ct'>
-    <view class='flex-1 b-r p-30'>
-      <view class='f-r26 m-b10'>累计收入积分</view>
-      <view class='f-m30'>12312</view>
+<view class='page-container bg-g' wx:if='{{records}}'>
+  <view>
+    <view wx:for='{{records}}' wx:key='{{index}}'>
+      <view class='f-s30 p-30'>代理城市一：{{item.provName}}{{item.cityName}}{{item.areaName}}</view>
+      <view class='flex bg-w ct'>
+        <view class='flex-1 b-r p-30'>
+          <view class='f-r26 m-b10'>累计收入积分</view>
+          <view class='f-m30'>{{item.totalPoints}}</view>
+        </view>
+        <view class='flex-1 b-r p-30'>
+          <view class='f-r26 m-b10'>拓展商家数</view>
+          <view class='f-m30'>{{item.businessCounts}}</view>
+        </view>
+        <view class='flex-1'>
+          <view class='f-r26 m-b10'>直推会员数</view>
+          <view class='f-m30'>{{item.memberCounts}}</view>
+        </view>
+      </view>
     </view>
-    <view class='flex-1 b-r p-30'>
-      <view class='f-r26 m-b10'>拓展商家数</view>
-      <view class='f-m30'>12312</view>
     </view>
-    <view class='flex-1'>
-      <view class='f-r26 m-b10'>直推会员数</view>
-      <view class='f-m30'>12312</view>
-    </view>
-  </view>
-
-  <view class='f-s30 p-30'>代理城市二：浙江省杭州市余杭区</view>
-  <view class='flex bg-w ct'>
-    <view class='flex-1 b-r p-30'>
-      <view class='f-r26 m-b10'>累计收入积分</view>
-      <view class='f-m30'>12312</view>
-    </view>
-    <view class='flex-1 b-r p-30'>
-      <view class='f-r26 m-b10'>拓展商家数</view>
-      <view class='f-m30'>12312</view>
-    </view>
-    <view class='flex-1'>
-      <view class='f-r26 m-b10'>直推会员数</view>
-      <view class='f-m30'>12312</view>
-    </view>
-  </view>
 </view>

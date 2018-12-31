@@ -1,0 +1,40 @@
+.page-input {
+  padding: 40rpx 0 20rpx 0;
+}
+.page-label {
+  width: 210rpx;
+  text-align: left;
+}
+.p-t60 {
+  padding-top: 60rpx;
+}
+.page-title {
+  margin-bottom: 60rpx;
+  font-size: 36rpx;
+}
+.code-btn {
+  background-color: transparent;
+  width:200rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  border-radius:4rpx;
+  /* border:1rpx solid rgba(214,214,214,1); */
+  text-align: center;
+}
+.code-btn[disabled] {
+  color: #D6D6D6 !important;
+  background-color: #fff !important;
+}
+.register-btn {
+  margin-top: 124rpx;
+  width:640rpx;
+  height:90rpx;
+  line-height: 90rpx;
+  background: #E53935;
+  border-radius:50rpx;
+  color: #fff;
+}
+.register-btn[disabled] {
+  background:rgba(249,119,119,1) !important;
+  color: #FFFFFF !important;
+}

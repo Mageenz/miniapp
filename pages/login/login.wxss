@@ -1,0 +1,25 @@
+.login-btn {
+  color: #1CAC1B;
+}
+.logo {
+  width: 121rpx;
+  height: 133rpx;
+  margin-bottom: 40rpx;
+  margin-top: 220rpx;
+}
+.login-btn {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90rpx;
+  width: 640rpx;
+  border:2rpx solid rgba(28,172,27,1);
+  border-radius:50rpx;
+  margin-top: 274rpx;
+}
+.icon-wechat {
+  width: 49rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}

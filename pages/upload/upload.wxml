@@ -1,0 +1,4 @@
+<view class='p-30'>
+  <image src='{{item.url}}' class='page-image m-r20' wx:for='{{shopFiles}}'></image>
+  <image src='/assets/images/upload.png' class='page-image' bindtap='handleUpload'></image>
+</view>

@@ -1,16 +1,17 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.94",
 	"appid": "wxa02503f55a406752",
-	"projectname": "wx-miniapp",
+	"projectname": "u%2B%E6%99%BA%E6%85%A7%E5%95%86%E5%9F%8E%E5%B0%8F%E7%A8%8B%E5%BA%8F",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -30,7 +31,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 38,
+			"current": 40,
 			"list": [
 				{
 					"id": 0,
@@ -39,10 +40,11 @@
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "订单详情",
-					"pathName": "pages/orderDetail/orderDetail",
-					"query": ""
+					"id": 1,
+					"name": "商家详情",
+					"pathName": "pages/shopDetail/shopDetail",
+					"query": "id=1",
+					"scene": "1011"
 				},
 				{
 					"id": -1,
@@ -171,10 +173,11 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 23,
 					"name": "首页",
 					"pathName": "pages/index/index",
-					"query": ""
+					"query": "",
+					"scene": "1011"
 				},
 				{
 					"id": -1,
@@ -264,6 +267,19 @@
 					"id": -1,
 					"name": "经营报表",
 					"pathName": "pages/businessReport/businessReport",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "注册",
+					"pathName": "pages/register/register",
 					"query": ""
 				}
 			]

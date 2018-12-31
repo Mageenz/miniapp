@@ -1,8 +1,8 @@
 .my-head {
-  padding: 157rpx 30rpx 30rpx 30rpx;
-  height: 307rpx;
+  padding: 30rpx;
   box-sizing: border-box;
   background-size: 100%;
+  background:linear-gradient(90deg,rgba(243,95,91,1) 0%,rgba(229,57,53,1) 100%);
 }
 .my-head .level {
   width: 126rpx;

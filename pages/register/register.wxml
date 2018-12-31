@@ -1,0 +1,20 @@
+<view class='p-l30 p-r30 p-t60'>
+  <view class='f-m36 c-1 page-title'>为了保障您的权益，请验证您的手机号码</view>
+  <view>
+    <view class='flex f-r30 b-b page-input'>
+      <text class='page-label'>手机号码</text>
+      <input class='flex-1' type='number' bindinput='handlePhoneInput' maxlength='11' placeholder-class='c-3' placeholder='请输入11位手机号'></input>
+    </view>
+    <view class='flex f-r30 b-b page-input'>
+      <text class='page-label'>验证码</text>
+      <input class='flex-1' type='number' bindinput='handleCodeInput' placeholder-class='c-3' maxlength='6' placeholder='请输入6位验证码'></input>
+      <button class='code-btn f-r26 c-1' disabled='{{disabled}}' bindtap='sendCode'>{{btntext}}</button>
+    </view>
+    <view class='flex f-r30 b-b page-input'>
+      <text class='page-label'>推荐人(选填)</text>
+      <input class='flex-1' placeholder-class='c-3' placeholder='请输入推荐人手机号或者ID'></input>
+    </view>
+  </view>
+
+  <button class='register-btn f-r30 ct' disabled='{{disabled1}}' bindtap='handleRegister'>免费注册</button>
+</view>

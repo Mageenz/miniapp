@@ -1,18 +1,32 @@
-// pages/message/message.js
+const api = require('../../api.js')
+const util = require('../../utils/util.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    messages: null
   },
+  getMessages() {
+    wx.showNavigationBarLoading()
+    api.common.getMessages().then(res => {
+      this.setData({
+        messages: res.data.data.map(item => {
+          item.date = util.formatTime(item.date)
 
+          return item
+        })
+      })
+      wx.hideNavigationBarLoading()
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getMessages()
   },
 
   /**

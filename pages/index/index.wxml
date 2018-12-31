@@ -1,75 +1,82 @@
 <view class='page-container'>
-  <view class='searchbar flex m-b20'>
-    <image class='icon-search' src='/assets/images/sousuo-2@2x.png'></image>
-    <text class='f-r26 c-2'>搜索优惠店名、地址</text>
-  </view>
+  <view>
+    <view class='searchbar flex m-b20 p-l30'>
+      <image class='icon-search' src='/assets/images/sousuo-2@2x.png'></image>
+      <text class='f-r26 c-2'>搜索优惠店名、地址</text>
+    </view>
 
-  <view class='swiper-wrap'>
-    <swiper indicator-dots='{{true}}' autoplay='{{true}}' circular='{{true}}' class='swiper'>
-      <swiper-item wx:for='{{[1,2,3,4]}}' class='swiper-item'>
-        <image src='/assets/images/tooopen_sy_185726882764.jpg' class='image'></image>
-      </swiper-item>
-    </swiper>
-  </view>
+    <view class='swiper-wrap'>
+      <swiper indicator-dots='{{true}}' autoplay='{{true}}' circular='{{true}}' class='swiper'>
+        <swiper-item wx:for='{{banners}}' class='swiper-item' wx:key='{{index}}'>
+          <image src='{{item.imgUrl}}' class='image'></image>
+        </swiper-item>
+      </swiper>
+    </view>
 
-  <view class='categorys-wrap'>
-    <view class='categorys m-b30 flex'>
-      <view class='item' wx:for='{{categorys1}}'>
-        <image src='{{item.src}}' class='image'></image>
-        <view class='f-r26 c-1'>{{item.name}}</view>
+    <view class='categorys-wrap' wx:hidden='{{!categorys1.length}}'>
+      <view class='categorys m-b30 flex'>
+        <view class='item' wx:for='{{categorys1}}' wx:key='{{index}}' bindtap='toShopList' data-id='{{item.id}}'>
+          <image src='{{item.wapBannerUrl}}' class='image'></image>
+          <view class='f-r26 c-1'>{{item.name}}</view>
+        </view>
+      </view>
+      <view class='categorys flex'>
+        <view class='item' wx:for='{{categorys2}}' wx:key='{{index}}' bindtap='toShopList' data-id='{{item.id}}' data-index='{{index}}'>
+          <image src='{{item.wapBannerUrl}}' class='image'></image>
+          <view class='f-r26 c-1'>{{item.name}}</view>
+        </view>
       </view>
     </view>
-    <view class='categorys flex'>
-      <view class='item' wx:for='{{categorys2}}' bindtap='toCategory'>
-        <image src='{{item.src}}' class='image'></image>
-        <view class='f-r26 c-1'>{{item.name}}</view>
+    
+    <view class='hot-wrap' wx:if='{{isLocationAuth}}'>
+      <view class='flex hot-title'>
+        <image class='icon-hot m-r10' src='/assets/images/fire@2x.png'></image>
+        <text class='f-m32 c-1'>热门商家</text>
       </view>
-    </view>
-  </view>
-  
-  <view class='hot-wrap'>
-    <view class='flex hot-title'>
-      <image class='icon-hot m-r10' src='/assets/images/fire@2x.png'></image>
-      <text class='f-m32 c-1'>热门商品</text>
-    </view>
-    <view class='flex hot-filters ct'>
-      <view class='item f-r26 c-2'>
-        <text>距离最近</text>
+      <view class='flex hot-filters ct'>
+        <view class='item f-r26 c-2'>
+          <text class='{{filterForm.orderByField == 1 ? "active" : ""}}' bindtap='filterShopList' data-type='1'>距离最近</text>
+        </view>
+        <view class='bd'></view>
+        <view class='item f-r26 c-2'>
+          <text class='{{filterForm.orderByField == 2 ? "active" : ""}}' bindtap='filterShopList' data-type='2'>优惠最高</text>
+        </view>
+        <view class='bd'></view>
+        <view class='item f-r26 c-2'>
+          <text class='{{filterForm.orderByField == 3 ? "active" : ""}}' bindtap='filterShopList' data-type='3'>好评优先</text>
+        </view>
+        <view class='bd'></view>
+        <view class='item f-r26 c-2'>
+          <text>范围</text>
+        </view>
       </view>
-      <view class='bd'></view>
-      <view class='item f-r26 c-2'>
-        <text>优惠最高</text>
-      </view>
-      <view class='bd'></view>
-      <view class='item f-r26 c-2'>
-        <text>好评优先</text>
-      </view>
-      <view class='bd'></view>
-      <view class='item f-r26 c-2'>
-        <text>范围</text>
-      </view>
-    </view>
-    <view class='good-list'>
-      <view class='item flex' wx:for='{{[1,2,3,4,5]}}'>
-        <image src='/assets/images/good.png' class='image m-r20'></image>
-        <view class='info flex-1'>
-          <view class='flex' style='margin-bottom:11rpx;'>
-            <text class='f-m28 c-1 flex-1'>嘻嘻嘻嘻嘻嘻</text>
-            <text class='f-r22 c-r'>评分：4.7</text>
-          </view>
-          <view class='f-r22 c-3 flex' style='margin-bottom:6rpx;'>
-            <text class='flex-1'>主营类目：三生三世，三生三世</text>
-            <text>已售：500</text>
-          </view>
-          <view class='f-r22 c-3 flex m-b10'>
-            <text class='flex-1'>地址：湿哒哒大所大所大所</text>
-            <text>321米</text>
-          </view>
-          <view class=''>
-            <text class='yh f-r22 c-r'>优惠30%</text>
+      <view class='good-list' wx:if='{{shops.length && isLoaded}}'>
+        <view class='item flex' wx:for='{{shops}}' wx:key='{{index}}' data-id='{{item.id}}' bindtap='toShopDetail'>
+          <image src='{{item.picUrl}}' class='image m-r20'></image>
+          <view class='info flex-1'>
+            <view class='flex' style='margin-bottom:11rpx;'>
+              <text class='f-m28 c-1 flex-1'>{{item.name}}</text>
+              <text class='f-r22 c-r'>评分：{{item.avgComment}}</text>
+            </view>
+            <view class='f-r22 c-3 flex' style='margin-bottom:6rpx;'>
+              <text class='flex-1'>主营类目：{{item.kinds}}</text>
+              <text>已售：500</text>
+            </view>
+            <view class='f-r22 c-3 flex m-b10'>
+              <text class='flex-1'>地址：{{item.areaDetail}}</text>
+              <text>{{item.distance}}米</text>
+            </view>
+            <view class=''>
+              <text class='yh f-r22 c-r'>优惠{{item.couponsRatio/100}}%</text>
+            </view>
           </view>
         </view>
       </view>
+      <view wx:if='{{!shops.length && isLoaded}}' class='f-r28 ct c-2 p-30'>暂无数据</view>
+    </view>
+    <view wx:else class='f-r30 ct p-30 m-t30 c-2'>
+      <text>定位失败</text>
+      <text> 前去设置</text>
     </view>
   </view>
 </view>

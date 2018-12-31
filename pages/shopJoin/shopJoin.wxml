@@ -1,108 +1,130 @@
-<view class='page-container f-r30 c-1 bg-g'>
-  <view class='modules bg-w m-b20'>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>所属城市</text>
-      <view class='flex-1 m-r20'>
-        <picker mode='region' value='{{city}}'>
-          <view class='c-4 cr'>{{city[0]}}，{{city[1]}}，{{city[2]}}</view>
+<view class='page-container f-r30 c-1 bg-g p-b30'>
+  <form bindsubmit='handleFormSubmit'>
+    <view class='modules bg-w m-b20'>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>所属城市</text>
+        <picker class='flex-1 m-r20' mode="region" bindchange="handleRegionChange" value="{{region}}">
+          <view class='cr'>
+            <text class='m-r20'>{{region[0]}}</text>
+            <text class='m-r20'>{{region[1]}}</text>
+            <text>{{region[2]}}</text>
+          </view>
         </picker>
+        <image src='/assets/images/go.png' class='icon-go'></image>
       </view>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>商家名称</text>
+        <input class='flex-1 cl' name='name' placeholder='请输入商家名称'></input>
+      </view>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>门店地址</text>
+        <input class='flex-1 cl' name='address' placeholder='请输入门店地址'></input>
+      </view>
+      <view class='module flex p-r30 p-l30' bindtap='chooseLocation'>
+        <text class='label1'>地图定位</text>
+        <view class='m-r20 flex-1'>{{form.business.areaDetail}}</view>
+        <image src='/assets/images/go.png' class='icon-go'></image>
+      </view>
     </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>商家名称</text>
-      <input class='flex-1 cl' placeholder='请输入商家名称'></input>
-    </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>门店地址</text>
-      <input class='flex-1 cl' placeholder='请输入门店地址'></input>
-    </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1 flex-1'>地图定位</text>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
-    </view>
-  </view>
 
-  <view class='modules bg-w m-b20'>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>负责人姓名</text>
-      <input class='flex-1 cl' placeholder='请输入负责人姓名'></input>
+    <view class='modules bg-w m-b20'>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>负责人姓名</text>
+        <input class='flex-1 cl' name='linkMan' placeholder='请输入负责人姓名'></input>
+      </view>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>ID号</text>
+        <input class='flex-1 cl' name='memberId' placeholder='请输入ID号'></input>
+      </view>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>店铺联系方式</text>
+        <input class='flex-1 cl' name='shopPhone' placeholder='请输入店铺联系方式'></input>
+      </view>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>联系方式</text>
+        <input class='flex-1 cl' name='telephone' maxlength='11' placeholder='请输入联系方式' bindinput='handleTelephoneInput'></input>
+        <button class='code-btn f-r26' bindtap='sendCode' disabled='{{isSending}}'>{{btntext}}</button>
+      </view>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>验证码</text>
+        <input class='flex-1 cl' name='smsCode' placeholder='请输入验证码'></input>
+      </view>
     </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>ID号</text>
-      <input class='flex-1 cl' placeholder='请输入ID号'></input>
-    </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>店铺联系方式</text>
-      <input class='flex-1 cl' placeholder='请输入店铺联系方式'></input>
-    </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>联系方式</text>
-      <input class='flex-1 cl' placeholder='请输入联系方式'></input>
-    </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>验证码</text>
-      <input class='flex-1 cl' placeholder='请输入验证码'></input>
-    </view>
-  </view>
 
-  <view class='modules bg-w m-b20'>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>经营类目</text>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+    <view class='modules bg-w m-b20'>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>经营类目</text>
+        <picker class='flex-1' mode='multiSelector' range='{{categorysRange}}' value='{{categorysValue}}' range-key='name' bindchange='handleCategorysChange' bindcolumnchange='handleCategorysChange1'>
+          <view class='m-r20 cr'>
+            <text class='m-r20'>{{categorysRange[0][categorysValue[0]].name}}</text>
+            <text>{{categorysRange[1][categorysValue[1]].name}}</text>
+          </view>
+        </picker>
+        <image src='/assets/images/go.png' class='icon-go'></image>
+      </view>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>经营品项</text>
+        <input class='flex-1 cl' name='kinds' placeholder='请输入经营品项'></input>
+      </view>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>商家简介</text>
+        <input class='flex-1 cl' name='shopDesc' placeholder='请输入商家简介'></input>
+      </view>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>店内服务</text>
+        <input class='flex-1 cl' name='shopService' placeholder='请输入店内服务'></input>
+      </view>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>营业开始时间</text>
+        <picker name='shopStartTime' class='flex-1 m-r20' mode="time" value="{{shopStartTime}}" bindchange="handleShopStartTimeChange">
+          <view class='cr'>{{shopStartTime}}</view>
+        </picker>
+        <image src='/assets/images/go.png' class='icon-go'></image>
+      </view>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>营业结束时间</text>
+        <picker name='shopEndTime' class='flex-1 m-r20' mode="time" value="{{shopEndTime}}" bindchange="handleShopEndTimeChange">
+          <view class='cr'>{{shopEndTime}}</view>
+        </picker>
+        <image src='/assets/images/go.png' class='icon-go'></image>
+      </view>
+      <view class='module flex p-r30 p-l30' bindtap='toUpload' data-type='2'>
+        <text class='label1 flex-1'>上传营业执照</text>
+        <image src='/assets/images/go.png' class='icon-go'></image>
+      </view>
+      <view class='module flex p-r30 p-l30' bindtap='toUpload' data-type='3'>
+        <text class='label1 flex-1'>上传其他证照</text>
+        <image src='/assets/images/go.png' class='icon-go'></image>
+      </view>
+      <view class='module flex p-r30 p-l30' bindtap='toUpload' data-type='4'>
+        <text class='label1 flex-1'>上传门头照</text>
+        <image src='/assets/images/go.png' class='icon-go'></image>
+      </view>
+      <view class='module flex p-r30 p-l30' bindtap='toUpload' data-type='1'>
+        <text class='label1 flex-1'>上传店内照片</text>
+        <image src='/assets/images/go.png' class='icon-go'></image>
+      </view>
     </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>经营品项</text>
-      <input class='flex-1 cl' placeholder='请输入经营品项'></input>
-    </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>商家简介</text>
-      <input class='flex-1 cl' placeholder='请输入商家简介'></input>
-    </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>店内服务</text>
-      <input class='flex-1 cl' placeholder='请输入店内服务'></input>
-    </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>营业时间</text>
-      <input class='flex-1 cl' placeholder='请输入营业时间'></input>
-    </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1 flex-1'>上传营业执照</text>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
-    </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1 flex-1'>上传其他证照</text>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
-    </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1 flex-1'>上传门头照</text>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
-    </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1 flex-1'>上传店内照片</text>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
-    </view>
-  </view>
 
-  <view class='modules bg-w'>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>推荐人ID号</text>
-      <input class='flex-1 cl' placeholder='请输入推荐人ID号'></input>
+    <view class='modules bg-w'>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>推荐人ID号</text>
+        <input class='flex-1 cl' name='referrerId' placeholder='请输入推荐人ID号'></input>
+      </view>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>推荐人姓名</text>
+        <input class='flex-1 cl' name='referrerName' placeholder='请输入推荐人姓名'></input>
+      </view>
+      <view class='module flex p-r30 p-l30'>
+        <text class='m-r30'>推荐人联系方式</text>
+        <input class='flex-1 cl' name='referrerPhone' placeholder='请输入推荐人联系方式'></input>
+      </view>
+      <view class='module flex p-r30 p-l30'>
+        <text class='m-r30'>优惠抵用金比例</text>
+        <input class='flex-1 cl' name='couponsRatio' placeholder='请输入优惠抵用金比例'></input>
+      </view>
     </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>推荐人姓名</text>
-      <input class='flex-1 cl' placeholder='请输入推荐人姓名'></input>
-    </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='m-r30'>推荐人联系方式</text>
-      <input class='flex-1 cl' placeholder='请输入推荐人联系方式'></input>
-    </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='flex-1'>优惠抵用金比例</text>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
-    </view>
-  </view>
 
-  <button class='page-btn c-w f-r32 m-t30 m-b30'>提交申请</button>
+    <button class='page-btn c-w f-r32 m-t30' form-type='submit' disabled='{{isLoading}}'>提交申请</button>
+  </form>
 </view>

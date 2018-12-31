@@ -1,18 +1,28 @@
-// pages/cityOverview/cityOverview.js
+const api = require('../../api.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    records: null
   },
-
+  getCityOverview() {
+    api.agent.getCityOverview().then(res => {
+      if(res.data.code === '0') {
+        this.setData({
+          records: res.data.data
+        })
+      }
+      wx.stopPullDownRefresh()
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getCityOverview()
   },
 
   /**
@@ -47,7 +57,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.getCityOverview()
   },
 
   /**

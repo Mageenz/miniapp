@@ -1,0 +1,84 @@
+<view class='page-container' wx:if='{{detail}}'>
+  <view class='head m-b20'>
+    <view class='flex'>
+      <view class='flex-1'></view>
+      <!-- <image src='/assets/images/share.png' class='top-btn'></image> -->
+      <image src='/assets/images/collect.png' class='top-btn' bindtap='handleCollect' wx:if='{{!isCollect}}'></image>
+      <image src='/assets/images/collectTrue.png' class='top-btn' bindtap='handleUnCollect' wx:else></image>
+    </view>
+    <view class='good-info flex'>
+      <view class='flex-1'>
+        <view class='f-m30 c1 name'>{{detail.business.name}}</view>
+        <view class='pf-wrap m-b20 flex'>
+          <view class='pf-star flex m-r20' style='background-image:url(/assets/images/star-kx.png)'>
+            <view class='star-sx' style='{{"background-image:url(/assets/images/star-sx.png); width:"+ detail.busniess.avgComment/5}}'></view>
+          </view>
+          <text class='f-r22 c-2'>{{detail.business.avgComment}}分（{{detail.business.totalComment}}人评）</text>
+        </view>
+        <!-- <view class='new f-r22 c-3'>公告：休息中 10:30营业</view> -->
+      </view>
+      <image class='image' src='{{detail.business.picUrl}}'></image>
+    </view>
+    <view class='address flex'>
+      <image src='/assets/images/dingwei@2x.png' class='icon-address'></image>
+      <view class='f-r22 c-3 flex-1'>{{detail.business.areaDetail}}</view>
+      <image src='/assets/images/Oval@2x (2).png' class='icon-phone'></image>
+    </view>
+  </view>
+
+  <view class='body'>
+    <view class='content'>
+      <view class='title flex'>
+        <image src='/assets/images/Rectangle 11@2x.png' class='icon-title'></image>
+        <view class='f-m28 c-1'>优惠信息</view>
+      </view>
+      <view class='flex yh'>
+        <view class='flex-1 flex'>
+          <view class='f-r28 c-1 m-r30'>{{100 - detail.business.couponsRatio}}%现金</view>
+          <view class='f-r28 c-1 m-r30'>+</view>
+          <view class='f-r28 c-1'>{{detail.business.couponsRatio}}%优惠</view>
+        </view>
+        <button class='btn-buyorder f-r28 c-w'>买单</button>
+      </view>
+    </view>
+    <view class='content b-t p-b0'>
+      <view class='title flex m-b10'>
+        <image src='/assets/images/Rectangle 11@2x.png' class='icon-title'></image>
+        <view class='f-m28 c-1'>用户评论</view>
+      </view>
+      <view class='comments' wx:if='{{comments.length}}'>
+        <view class='flex comment' wx:for='{{comments}}' key='{{item.id}}'>
+          <image src='/assets/images/good.png' class='avator m-r20'></image>
+          <view class='flex-1'>
+            <view class='flex' style='margin-bottom:5rpx;'>
+              <text class='flex-1 f-r22 c-1'>姓名</text>
+              <text class='f-r22 c-2'>{{item.time}}</text>
+            </view>
+            <view class='flex' style='margin-bottom: 17rpx;'>
+              <text class='f-r22 c-2'>评分：</text>
+              <view class='pf-star' style='background-image:url(/assets/images/star-kx.png)'>
+                <view class='star-sx' style='{{"background-image:url(/assets/images/star-sx.png);width:"+(item.score/5)}}'></view>
+              </view>
+            </view>
+            <view class='f-r22 c-1 m-b20'>{{item.content}}</view>
+            <view>
+              <image src='{{item.picture}}' class='good-image m-r20'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:else class='ct f-r30 c-2 p-30'>暂无评论</view>
+    </view>
+    <view class='content b-t'>
+      <view class='title flex m-b30'>
+        <image src='/assets/images/Rectangle 11@2x.png' class='icon-title'></image>
+        <view class='f-m28 c-1'>商家信息</view>
+      </view>
+      <view class='p-l30'>
+        <view class='flex'>
+          <text class='f-r24 c-2'>营业时间：{{detail.business.shopStartTime}} - {{detail.business.shopEndTime}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

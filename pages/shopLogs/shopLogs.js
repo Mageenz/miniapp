@@ -1,18 +1,30 @@
-// pages/shopLogs/shopLogs.js
+const api = require('../../api.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    records: null,
+    region: ['北京市', '北京市', '东城区'],
+    date: '2018-12-12'
   },
+  handleDateChange(e) {
+    this.setData({
+      date: e.detail.value
+    })
+  },
+  getLogs() {
 
+    api.agent.getLogs().then(res => {
+
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**

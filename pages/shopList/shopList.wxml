@@ -1,0 +1,45 @@
+<view class='page-container p-l30 p-r30'>
+  <view wx:if='{{isLocationAuth}}'>
+    <view class='flex hot-filters ct'>
+      <view class='item f-r26 c-2'>
+        <text class='{{filterForm.orderByField == 1 ? "active" : ""}}' bindtap='filterShopList' data-type='1'>距离最近</text>
+      </view>
+      <view class='bd'></view>
+      <view class='item f-r26 c-2'>
+        <text class='{{filterForm.orderByField == 2 ? "active" : ""}}' bindtap='filterShopList' data-type='2'>优惠最高</text>
+      </view>
+      <view class='bd'></view>
+      <view class='item f-r26 c-2'>
+        <text class='{{filterForm.orderByField == 3 ? "active" : ""}}' bindtap='filterShopList' data-type='3'>好评优先</text>
+      </view>
+      <view class='bd'></view>
+      <view class='item f-r26 c-2'>
+        <text>范围</text>
+      </view>
+    </view>
+    <view class='good-list' wx:if='{{shops.length && isLoaded}}'>
+      <view class='item flex' wx:for='{{shops}}' wx:key='{{index}}'>
+        <image src='{{item.picUrl}}' class='image m-r20'></image>
+        <view class='info flex-1'>
+          <view class='flex' style='margin-bottom:11rpx;'>
+            <text class='f-m28 c-1 flex-1'>{{item.name}}</text>
+            <text class='f-r22 c-r'>评分：{{item.avgComment}}</text>
+          </view>
+          <view class='f-r22 c-3 flex' style='margin-bottom:6rpx;'>
+            <text class='flex-1'>主营类目：{{item.kinds}}</text>
+            <text>已售：500</text>
+          </view>
+          <view class='f-r22 c-3 flex m-b10'>
+            <text class='flex-1'>地址：{{item.areaDetail}}</text>
+            <text>{{item.distance}}米</text>
+          </view>
+          <view class=''>
+            <text class='yh f-r22 c-r'>优惠{{item.couponsRatio/100}}%</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if='{{!shops.length && isLoaded}}' class='f-r30 ct c-2 p-30'>暂无数据</view>
+  </view>
+  <view wx:else class='f-r30 c-2 ct p-30'>定位失败</view>
+</view>
