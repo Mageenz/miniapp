@@ -1,4 +1,5 @@
 const api = require('../../api.js')
+const util = require('../../utils/util.js')
 
 Page({
 
@@ -8,23 +9,49 @@ Page({
   data: {
     records: null,
     region: ['北京市', '北京市', '东城区'],
-    date: '2018-12-12'
+    time: '2018-12-12',
+    name: ''
+  },
+  handleNameInput(e) {
+    this.setData({
+      name: e.detail.value
+    })
+    this.getLogs()
+  },
+  handleRegionChange(e) {
+    this.setData({
+      region: e.detail.value
+    })
+    this.getLogs()
   },
   handleDateChange(e) {
     this.setData({
-      date: e.detail.value
+      time: e.detail.value
     })
+    this.getLogs()
   },
   getLogs() {
+    const codes = util.translateRegionNameToCode(this.data.region)
 
-    api.agent.getLogs().then(res => {
-
+    api.agent.getManageInfo({
+      name: this.data.name,
+      provId: codes[0],
+      cityId: codes[1],
+      areaId: codes[2],
+      time: this.data.time,
+      size: 100,
+      current: 1
+    }).then(res => {
+      this.setData({
+        records: res.data.data.records
+      })
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getLogs()
   },
 
   /**

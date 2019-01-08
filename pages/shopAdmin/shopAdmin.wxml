@@ -1,41 +1,41 @@
-<view class='page-container bg-g c-1'>
+<view class='page-container bg-g c-1' wx:if='{{info && shopInfo}}'>
   <view class='p-t30 bg-w m-b20 p-b30'>
     <image src='/assets/images/good.png' class='qrcode'></image>
-    <view class='ct f-r30'>陕老顺肉夹馍</view>
+    <view class='ct f-r30'>{{shopInfo.business.name}}</view>
   </view>
 
-  <view class='bg-w f-r26'>
+  <view class='bg-w f-r26' wx:if='{{info.isBusiness === true}}'>
     <view class='flex menus bb'>
-      <view class='flex-1 flex menu br'>
+      <navigator url='/pages/' hover-class='hoverClass' class='flex-1 flex menu br'>
         <image src='/assets/images/data@2x.png' class='page-icon'></image>
         <text>基础资料维护</text>
-      </view>
-      <view class='flex-1 flex menu'>
+      </navigator>
+      <navigator url='/pages/staffList/staffList' hover-class='hoverClass' class='flex-1 flex menu'>
         <image src='/assets/images/yuangong@2x.png' class='page-icon'></image>
         <text>员工管理</text>
-      </view>
+      </navigator>
     </view>
 
     <view class='flex menus bb'>
-      <view class='flex-1 flex menu br'>
+      <navigator url='/pages/receiptWaySetting/receiptWaySetting' hover-class='hoverClass' class='flex-1 flex menu br'>
         <image src='/assets/images/shiliangzhinengduixiangx@2x.png' class='page-icon'></image>
         <text>收款方式设置</text>
-      </view>
-      <view class='flex-1 flex menu'>
+      </navigator>
+      <navigator url='/pages/couponExchange/couponExchange' hover-class='hoverClass' class='flex-1 flex menu'>
         <image src='/assets/images/youhuijin@2x.png' class='page-icon'></image>
         <text>优惠金兑换</text>
-      </view>
+      </navigator>
     </view>
 
     <view class='flex menus'>
-      <view class='flex-1 flex menu br'>
+      <navigator url='/pages/contact/contact' hover-class='hoverClass'  class='flex-1 flex menu br'>
         <image src='/assets/images/cubanshipinyuanshibili@2x.png' class='page-icon'></image>
         <text>优惠比例调整</text>
-      </view>
-      <view class='flex-1 flex menu'>
+      </navigator>
+      <navigator url='/pages/businessReport/businessReport' hover-class='hoverClass' class='flex-1 flex menu'>
         <image src='/assets/images/baobiao@2x.png' class='page-icon'></image>
         <text>经营报表</text>
-      </view>
+      </navigator>
     </view>
   </view>
 </view>

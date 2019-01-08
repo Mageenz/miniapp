@@ -1,18 +1,27 @@
-// pages/relationShipInfo/relationShipInfo.js
+const api = require('../../api.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    info: null
   },
-
+  getFansList() {
+    api.agent.getFansList().then(res => {
+      if(res.data.code === '0') {
+        this.setData({
+          info: res.data.data
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getFansList()
   },
 
   /**

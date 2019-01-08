@@ -1,47 +1,63 @@
 const app = getApp()
 const api = require('../../api.js')
+var QQMapWX = require('../../lib/qqmap-wx-jssdk.min.js');
+const wxMap = new QQMapWX({
+  key: 'MKLBZ-5U5KJ-V7NFI-FENTV-WHZR5-JJF3I'
+})
 
 Page({
   data: {
     banners: [],
     categorys1: [],
     categorys2: [],
-    isLoaded: false,
-    shops: [],
+    shops: null,
     filterForm: {
       orderByField: 1,
       isAsc: true,
       range: 500,
-      size: 20,
+      size: 100,
       current: 1,
       lng: '',
       lat: ''
     },
-    isLocationAuth: true
+    // integer(query)	范围 0：全部，1：500米 2：1km 3: 3KM 4：5KM
+    ranges: [{
+      value: 0,
+      name: '全部'
+    }, {
+      value: 1,
+      name: '500米'
+    }, {
+      value: 2,
+      name: '1km'
+    }, {
+      value: 3,
+      name: '3km'
+    }, {
+      value: 4,
+      name: '5km'
+    }],
+    range: 0,
+    isLocationAuth: true,
+    address: ''
+  },
+  handleRangeChange(e) {
+    this.setData({
+      range: e.detail.value,
+      'filterForm.range': this.data.ranges[e.detail.value].value
+    })
+    this.getShopList()
+  },
+  handleSm() {
+    wx.scanCode({
+      scanType: ['barCode', 'qrCode', 'datamatrix', 'pdf417'],
+      success: res => {
+        console.log('res', res)
+      }
+    })
   },
   onLoad() {
     this.initRequest()
-    this.getLocation()
-    // wx.getSetting({
-    //   success: res => {
-    //     if (res.authSetting['scope.userLocation']) {
-    //       this.getLocation()
-    //     } else {
-    //       wx.authorize({
-    //         scope: 'scope.userLocation',
-    //         success: () => {
-    //           this.getLocation()
-    //         },
-    //         fail: res => {
-    //           console.log('fail', res)
-    //           this.setData({
-    //             isLocationAuth: false
-    //           })
-    //         }
-    //       })
-    //     }
-    //   }
-    // })
   },
   toShopDetail(e) {
     wx.navigateTo({
@@ -61,6 +77,23 @@ Page({
       })
     }
   },
+  reverseGeocoder(latitude, longitude) {
+    wxMap.reverseGeocoder({
+      location: {
+        latitude,
+        longitude
+      },
+      success: res => {
+        console.log(res)
+        this.setData({
+          address: res.result.formatted_addresses.recommend
+        })
+      },
+      complete: res => {
+        // console.log('complete', res)
+      }
+    })
+  },
   getLocation() {
     wx.getLocation({
       type: 'gcj02',
@@ -69,6 +102,7 @@ Page({
         this.data.filterForm.lat = res.latitude
         this.data.filterForm.lng = res.longitude
         this.getShopList()
+        this.reverseGeocoder(res.latitude, res.longitude)
       },
       fail: err => {
         this.setData({
@@ -80,7 +114,7 @@ Page({
   initRequest() {
     wx.showNavigationBarLoading()
     Promise.all([this.getBanners(), this.getCategorys()]).then(res => {
-      console.log(res)
+      this.getLocation()
       wx.hideNavigationBarLoading()
     })
   },
@@ -94,10 +128,10 @@ Page({
     wx.showNavigationBarLoading()
     api.common.getShopList(this.data.filterForm).then(res => {
       this.setData({
-        shops: res.data.data.records || [],
-        isLoaded: true
+        shops: res.data.data.records || []
       })
       wx.hideNavigationBarLoading()
+      wx.stopPullDownRefresh()
     })
   },
   getBanners() {
@@ -127,5 +161,8 @@ Page({
         resolve(res)
       })
     })
+  },
+  onPullDownRefresh() {
+    this.getShopList()
   }
 })

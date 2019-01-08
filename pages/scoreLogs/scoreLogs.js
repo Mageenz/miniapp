@@ -1,18 +1,37 @@
-// pages/scoreLogs/scoreLogs.js
+const api = require('../../api.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    records: null,
+    operationType: {
+      1: '购买会员卡',
+      2: '直推奖',
+      3: '团队奖',
+      4: '代理分润',
+      5: '推荐商家分润'
+    }
   },
-
+  getUserPointsLogs() {
+    api.user.getUserPointsLogs({
+      size: 100,
+      current: 1
+    }).then(res => {
+      if(res.data.code === '0') {
+        this.setData({
+          records: res.data.data.records
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getUserPointsLogs()
   },
 
   /**

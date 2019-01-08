@@ -1,18 +1,48 @@
-// pages/businessReport/businessReport.js
+const api = require('../../api.js')
+// 1: 今日报表 ：2近七日报表 3：当月报表 4：近三月报表
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    types: [{
+      value: 1,
+      name: '今日报表'
+    }, {
+      value: 2,
+        name: '近七日报表'
+    }, {
+      value: 3,
+      name: '当月报表'
+    }, {
+      value: 4,
+      name: '近三月报表'
+    }],
+    type: 0,
+    info: null
   },
-
+  handleTypeChange(e) {
+    this.setData({
+      type: e.detail.value
+    })
+    this.getReport()
+  },
+  getReport() {
+    api.admin.getReport({
+      type: this.data.type
+    }).then(res => {
+      this.setData({
+        info: res.data.data
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getReport()
   },
 
   /**

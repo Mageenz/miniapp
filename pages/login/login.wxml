@@ -1,7 +1,7 @@
 <view class='ct'>
   <image src='/assets/images/logo.png' class='logo'></image>
   <view class='f-m36 c-1'>一张会员卡，全国都优惠</view>
-  <button class='login-btn' open-type='getUserInfo' bindgetuserinfo='bindgetuserinfo' bindtap='handleLogin'>
+  <button class='login-btn' open-type='getUserInfo' bindgetuserinfo='bindgetuserinfo' disabled='{{disabled}}'>
     <image src='/assets/images/loginwechat.png' class='icon-wechat'></image>
     <text class='f-r30'>微信一键登录</text>
   </button>

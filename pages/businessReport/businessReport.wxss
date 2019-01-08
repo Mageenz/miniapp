@@ -1,4 +1,9 @@
 .page-title {
   height: 100rpx;
-  text-align: center;
+  justify-content: center;
+}
+.bb-x {
+  width: 25rpx;
+  height: 15rpx;
+  margin-left: 20rpx;
 }

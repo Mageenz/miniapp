@@ -1,11 +1,19 @@
-// pages/my/my.js
+const api = require('../../api.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    info: null
+  },
+  getUserInfo() {
+    api.user.getUserInfo().then(res => {
+      this.setData({
+        info: res.data.data
+      })
+    })
   },
   handleNavigate(e) {
     wx.navigateTo({
@@ -16,7 +24,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getUserInfo()
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

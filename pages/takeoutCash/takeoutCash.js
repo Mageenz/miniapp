@@ -1,18 +1,45 @@
-// pages/takeoutCash/takeoutCash.js
+const api = require('../../api.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    exchanged: 0,
+    disabled: false
   },
-
+  getTrans() {
+    this.setData({
+      disabled: true
+    })
+    api.admin.getTrans({
+      exchanged: +this.data.exchanged,
+      exchangedType: 1,
+      type: 1
+    }).then(res => {
+      if(res.data.code === '0') {
+        wx.showToast({
+          title: '提现成功',
+        })
+        setTimeout(() => {
+          wx.navigateBack({
+            delta: 2
+          })
+        }, 1500)
+      }
+      this.setData({
+        disabled: false
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      exchanged: options.cash
+    })
   },
 
   /**

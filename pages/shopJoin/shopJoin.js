@@ -54,7 +54,7 @@ Page({
     if (!/^1\d{10}$/.test(this.data.form.business.telephone)) {
       wx.showToast({
         title: '格式错误',
-        image: '/assets/images/warning.png'
+        icon: 'none'
       })
       return
     }
@@ -193,7 +193,6 @@ Page({
     let form = this.data.form
     form.categories = []
 
-    form.smsCode = formData.smsCode
     for(let key in form.business) {
       form.business[key] = formData[key] || form.business[key]
     }
@@ -201,9 +200,6 @@ Page({
     for (let key in form.detail) {
       form.detail[key] = formData[key] || form.detail[key]
     }
-    form.business.areaId = codes[2]
-    form.business.cityId = codes[1]
-    form.business.provId = codes[0]
 
     this.data.categorysValue.forEach((item, index) => {
       if(this.data.categorysRange[index].length) {
@@ -213,21 +209,30 @@ Page({
       }
     })
 
+    form.smsCode = formData.smsCode
+    form.business.areaId = codes[2]
+    form.business.cityId = codes[1]
+    form.business.provId = codes[0]
     form.pictures = app.globalData.shopFiles
-
+    form.business.couponsRatio = form.business.couponsRatio*100
+    
     // console.log('form', this.data.form)
     wx.showNavigationBarLoading()
+    
     this.setData({
       isLoading: true
     })
+
     api.shop.join(form).then(res => {
       if(res.data.code === '0') {
         wx.showToast({
           title: '提交成功',
         })
-        wx.navigateBack({
-          delta: '1'
-        })
+        setTimeout(() => {
+          wx.navigateBack({
+            delta: '1'
+          })
+        }, 1500)
       }
       this.setData({
         isLoading: false

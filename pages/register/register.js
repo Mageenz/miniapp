@@ -22,12 +22,28 @@ Page({
     this.setData({
       disabled1: true
     })
+    api.user.register(this.data.form).then(res => {
+      try {
+        if (res.data.code === '0') {
+          wx.setStorage({
+            key: 'SESSION',
+            data: res.header['Set-Cookie'].split(';')[0].split('=')[1]
+          })
+          console.log('res', res)
+          wx.switchTab({
+            url: '/pages/index/index',
+          })
+        }
+      } catch (e) {
+
+      }
+    })
   },
   sendCode() {
     if (!/^1\d{10}$/.test(this.data.form.phone)) {
       wx.showToast({
         title: '格式错误',
-        image: '/assets/images/warning.png'
+        icon: 'none'
       })
       return
     }
@@ -71,9 +87,12 @@ Page({
     })
   },
   handleCodeInput(e) {
+    this.setData({
+      'form.smsCode': e.detail.value
+    })
     if (/^1\d{10}$/.test(this.data.form.phone) && e.detail.value) {
       this.setData({
-        'disabled1': false
+        'disabled1': false,
       })
     }
   },
@@ -98,7 +117,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      'form.code': options.code
+    })
   },
 
   /**

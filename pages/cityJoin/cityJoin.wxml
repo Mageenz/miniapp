@@ -1,41 +1,46 @@
 <view class='page-container f-r30 c-1 bg-g'>
-  <view class='modules bg-w m-b20'>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>申请城市</text>
-      <view class='flex-1 m-r20'>
-        <picker mode='region' value='{{city}}'>
-          <view class='c-4 cr'>{{city[0]}}，{{city[1]}}，{{city[2]}}</view>
+  <form bindsubmit='handleFormSubmit'>
+    <view class='modules bg-w m-b20'>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>申请城市</text>
+        <picker class='flex-1 m-r20' mode="region" bindchange="handleRegionChange" value="{{region}}">
+          <view class='cr'>
+            <text class='m-r20'>{{region[0]}}</text>
+            <text class='m-r20'>{{region[1]}}</text>
+            <text>{{region[2]}}</text>
+          </view>
         </picker>
+        <image src='/assets/images/go.png' class='icon-go'></image>
       </view>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>申请人姓名</text>
+        <input class='flex-1 cl' name='name' placeholder='请输入申请人姓名'></input>
+      </view>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>身份证号码</text>
+        <input class='flex-1 cl' name='cardNumber' maxlength='18' placeholder='请输入身份证号码'></input>
+      </view>
     </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>申请人姓名</text>
-      <input class='flex-1 cl' placeholder='请输入申请人姓名'></input>
-    </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>身份证号码</text>
-      <input class='flex-1 cl' placeholder='请输入身份证号码'></input>
-    </view>
-  </view>
 
-  <view class='modules bg-w m-b20'>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>手机号码</text>
-      <input class='flex-1 cl' placeholder='请输入手机号码'></input>
+    <view class='modules bg-w m-b20'>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>手机号码</text>
+        <input class='flex-1 cl' maxlength='11' name='phone' placeholder='请输入手机号码' bindinput='handlePhoneInput'></input>
+      </view>
+      <view class='module flex p-r30 p-l30'>
+        <text class='label1'>验证码</text>
+        <input class='flex-1 cl' name='smsCode' placeholder='请输入验证码'></input>
+        <text bindtap='sendCode' class='{{"f-m28 code-btn "+ (isSending ? "c-3" : "c-r")}}'>{{btntext}}</text>
+      </view>
     </view>
-    <view class='module flex p-r30 p-l30'>
-      <text class='label1'>验证码</text>
-      <input class='flex-1 cl' placeholder='请输入验证码'></input>
-    </view>
-  </view>
 
-  <view class='modules bg-w m-b30'>
-    <view class='flex p-30 ai-top'>
-      <text class='label1'>申请理由</text>
-      <textarea class='fc' placeholder='请阐述您的推广策略、资源、 理念...（最多500字）'></textarea>
+    <view class='modules bg-w m-b30'>
+      <view class='flex p-30 ai-top'>
+        <text class='label1'>申请理由</text>
+        <textarea class='fc' name='reason' placeholder='请阐述您的推广策略、资源、 理念...（最多500字）'></textarea>
+      </view>
     </view>
-  </view>
 
-  <button class='page-btn f-r32 c-w'>提交申请</button>
+    <button class='page-btn f-r32 c-w' form-type='submit'>提交申请</button>
+  </form>
 </view>

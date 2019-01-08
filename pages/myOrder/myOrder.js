@@ -1,18 +1,41 @@
-// pages/myOrder/myOrder.js
+const api = require('../../api.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    records: null,
+    info: null
   },
-
+  getUserOrderInfo() {
+    api.user.getUserOrderInfo().then(res => {
+      if(res.data.code === '0') {
+        this.setData({
+          info: res.data.data
+        })
+      }
+    })
+  },
+  getUserOrders() {
+    api.user.getUserOrders({
+      current: 1,
+      size: 100
+    }).then(res => {
+      if(res.data.code === '0') {
+        this.setData({
+          records: res.data.data.records
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getUserOrders()
+    this.getUserOrderInfo()
   },
 
   /**

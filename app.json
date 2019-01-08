@@ -43,7 +43,8 @@
     "pages/shopList/shopList",
     "pages/login/login",
     "pages/upload/upload",
-    "pages/register/register"
+    "pages/register/register",
+    "pages/cityInfo/cityInfo"
   ],
   "window": {
     "backgroundTextStyle": "dark",

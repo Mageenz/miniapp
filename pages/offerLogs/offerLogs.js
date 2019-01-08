@@ -1,18 +1,28 @@
-// pages/offerLogs/offerLogs.js
+const api = require('../../api.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    records: null
   },
-
+  getCouponLogs() {
+    api.user.getCouponLogs({
+      size: 100,
+      current: 1
+    }).then(res => {
+      this.setData({
+        records: res.data.data.records
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getCouponLogs()
   },
 
   /**

@@ -1,37 +1,41 @@
-<view class='page-container bg-g c-1'>
+<view class='page-container bg-g c-1' wx:if='{{info}}'>
   <view class='page-title flex bg-w m-b20'>
-    <text class='flex-1 f-r30'>今日报表</text>
+    <picker range='{{types}}' range-key='name' value='{{type}}' bindchange='handleTypeChange'>
+      <text class='f-r30'>{{types[type].name}}</text>
+    </picker>
+    <image src='/assets/images/bb-x.png' class='bb-x'></image>
   </view>
 
   <view class='f-r26 bg-w ct p-l30 p-r30 m-b20'>
     <view style='padding-top:50rpx;padding-bottom:40rpx;' class='b-b'>
       <view class='m-b20'>交易金额（元）</view>
-      <view class='f-m30'>123123</view>
+      <view class='f-m30'>{{info.totalAmount}}</view>
     </view>
     <view class='flex' style='padding-top:40rpx;padding-bottom:40rpx;'>
       <view class='flex-1'>
         <view class='m-b20'>交易笔数（个）</view>
-        <view class='f-m30'>123123</view>
+        <view class='f-m30'>{{info.transNum}}</view>
       </view>
       <view class='flex-1'>
         <view class='m-b20'>优惠金抵用</view>
-        <view class='f-m30'>123123</view>
+        <view class='f-m30'>{{info.totalCoupons}}</view>
       </view>
     </view>
   </view>
 
-  <view class='p-t30 f-r26 c-1 bg-w'>
+  <view class='p-t30 f-r26 c-1 bg-w' wx:if='{{info.page.records.length}}'>
     <view class='flex m-b20 p-l30'>
-      <view class='flex-1'>会员名称：12阿达</view>
-      <view class='flex-1'>联系方式：1235123</view>
+      <view class='flex-1'>会员名称：{{item.memberName}}</view>
+      <view class='flex-1'>联系方式：{{item.phone}}</view>
     </view>
     <view class='flex b-b p-b20 p-l30'>
-      <view class='flex-1'>消费金额：1阿达23</view>
-      <view class='flex-1'>优惠抵用金：123</view>
+      <view class='flex-1'>消费金额：{{item.totalFee/100}}</view>
+      <view class='flex-1'>优惠抵用金：{{item.coupons/100}}</view>
     </view>
     <view class='flex p-l30 p-t20 p-b20 p-r30'>
-      <view class='flex-1'>ID号：123</view>
-      <view class='c-3'>2012-12-12 12:12:12</view>
+      <view class='flex-1'>ID号：{{item.memberId}}</view>
+      <view class='c-3'>{{item.payTime}}</view>
     </view>
   </view>
+  <nodata wx:else></nodata>
 </view>

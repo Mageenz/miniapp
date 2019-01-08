@@ -7,118 +7,65 @@ Page({
    * 页面的初始数据
    */
   data: {
-
-  },
-  handleLogin() {
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          wx.login({
-            success: res => {
-
-              api.user.getSession({
-                code: res.code
-              }).then(res => {
-                if (res.data.code === '0') {
-                  let sessionKey = res.data.data
-
-                  wx.getUserInfo({
-                    success: res => {
-                      console.log(res)
-
-                      // 登录接口
-                      api.user.login({
-                        code: sessionKey,
-                        type: 3,
-                        data: JSON.stringify({
-                          encryptedData: res.encryptedData,
-                          iv: res.iv,
-                          code: sessionKey
-                        })
-                      }).then(res => {
-                        console.log('login res', res)
-                      })
-                    }
-                  })
-                }
-              })
-            }
-          })
-          
-        }
-      },
-      fail: err => {
-
-      }
-    })
+    disabled: true,
+    sessionKey: ''
   },
   bindgetuserinfo(e) {
     console.log('e', e)
-  },
-  login() {
-    api.user.login().then(res => {
-      
-      const SESSION = res.header['Set-Cookie'].split(';')[0].split('=')[1]
-      wx.setStorage({
-        key: 'SESSION',
-        data: SESSION,
-      })
+    if (e.detail.encryptedData) {
+      api.user.login({
+        code: this.data.sessionKey,
+        type: 3,
+        data: JSON.stringify({
+          encryptedData: e.detail.encryptedData,
+          iv: e.detail.iv,
+          code: this.data.sessionKey
+        })
+      }).then(res => {
+        const code = res.data.code
 
-      wx.switchTab({
-        url: '/pages/index/index',
-      })
-    })
-  },
-  bindgetuserinfo(e) {
-    return
-    wx.login({
-      success(res) {
-        if (res.code) {
-          // 获取sessionkey
-          api.user.getSession({
-            code: res.code
-          }).then(res => {
-            if(res.data.code === '0') {
-              let sessionKey = res.data.data
-
-              // 登录接口
-              api.user.login({
-                code: sessionKey,
-                type: 3,
-                data: JSON.stringify({
-                  encryptedData: e.detail.encryptedData,
-                  iv: e.detail.iv,
-                  code: res.code
-                })
-              }).then(res => {
-                console.log('login res', res)
-              })
-            }
+        if (code === 'WISDOM_10176') {
+          // 未注册
+          setTimeout(() => {
+            wx.redirectTo({
+              url: `/pages/register/register?code=${this.data.sessionKey}`
+            })
+          }, 1500)
+        } else if (code === '0') {
+          wx.setStorage({
+            key: 'SESSION',
+            data: res.header['Set-Cookie'].split(';')[0].split('=')[1]
           })
-          
-        } else {
-          console.log('wx.login失败！' + res.errMsg)
+          wx.switchTab({
+            url: '/pages/index/index',
+          })
         }
-      }
-    })
+      }).catch(err => {
+        console.log('login fail', err)
+        this.setData({
+          disabled: true
+        })
+      })
+    }
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-    return
     wx.login({
-      success(res) {
-        if (res.code) {
-          api.user.login({
-            code: res.code,
-            type: 3
-          }).then(res => {
-            console.log('login', res)
-          })
-        } else {
-          console.log('wx.login失败！' + res.errMsg)
-        }
+      success: res => {
+        api.user.getSession({
+          code: res.code
+        }).then(res => {
+          if (res.data.code === '0') {
+            this.setData({
+              sessionKey: res.data.data,
+              disabled: false
+            })
+          }
+        }).catch(err => {
+          console.log('getsession fail', err)
+        })
+      },
+      fail: err => {
+        console.log('wx.login fail', err)
       }
     })
   },

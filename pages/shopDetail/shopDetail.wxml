@@ -34,11 +34,11 @@
       </view>
       <view class='flex yh'>
         <view class='flex-1 flex'>
-          <view class='f-r28 c-1 m-r30'>{{100 - detail.business.couponsRatio}}%现金</view>
+          <view class='f-r28 c-1 m-r30'>{{100 - detail.business.couponsRatio/100}}%现金</view>
           <view class='f-r28 c-1 m-r30'>+</view>
-          <view class='f-r28 c-1'>{{detail.business.couponsRatio}}%优惠</view>
+          <view class='f-r28 c-1'>{{detail.business.couponsRatio/100}}%优惠</view>
         </view>
-        <button class='btn-buyorder f-r28 c-w'>买单</button>
+        <button class='btn-buyorder f-r28 c-w' bindtap='handMd'>买单</button>
       </view>
     </view>
     <view class='content b-t p-b0'>

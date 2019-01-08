@@ -2,6 +2,14 @@
   background-color: #fff;
   padding: 30rpx;
 }
+.dingwei {
+  width: 32rpx;
+  height: 40rpx;
+}
+.index-sm {
+  width: 37rpx;
+  height: 38rpx;
+}
 .searchbar {
   background-color: rgba(235, 235, 235, 1);
   border-radius: 36rpx;
@@ -80,4 +88,12 @@
 .icon-hot {
   width: 25rpx;
   height: 33rpx;
+}
+.index-x {
+  width: 28rpx;
+  height: 15rpx;
+  margin-left: 10rpx;
+}
+.range {
+  justify-content: center;
 }

@@ -11,9 +11,14 @@ Page({
     isCollect: false,
     comments: []
   },
+  handMd() {
+    wx.navigateTo({
+      url: `/pages/buyOrder/buyOrder?businessId=${this.data.id}&couponsRatio=${this.data.detail.business.couponsRatio}`,
+    })
+  },
   checkCollection() {
     api.common.checkCollection({
-      id: this.data.detail.detail.id
+      id: this.data.id
     }).then(res => {
       if(res.data.code === '0') {
         this.setData({
@@ -24,7 +29,7 @@ Page({
   },
   handleCollect() {
     api.common.addCollection({
-      businessId: this.data.detail.detail.id
+      businessId: this.data.id
     }).then(res => {
       if(res.data.code === '0') {
         wx.showToast({
@@ -38,7 +43,7 @@ Page({
   },
   handleUnCollect() {
     api.common.removeCollection({
-      id: this.data.detail.detail.id
+      id: this.data.id
     }).then(res => {
       if (res.data.code === '0') {
         this.setData({

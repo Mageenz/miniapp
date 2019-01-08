@@ -1,18 +1,36 @@
-// pages/shopAdmin/shopAdmin.js
+const api = require('../../api.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    info: null,
+    shopInfo: null,
   },
-
+  getShopDetail(id) {
+    api.admin.getShopDetail({id}).then(res => {
+      this.setData({
+        shopInfo: res.data.data
+      })
+    })
+  },
+  check() {
+    api.admin.check().then(res => {
+      if(res.data.code === '0') {
+        this.getShopDetail(res.data.data.businessId)
+        this.setData({
+          info: res.data.data
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.check()
   },
 
   /**

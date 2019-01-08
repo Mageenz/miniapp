@@ -1,18 +1,55 @@
-// pages/staffList/staffList.js
+const api = require('../../api.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    isShow: false,
+    records: null
   },
+  handleSubmit(e) {
+    const data = e.detail.value
 
+    api.admin.addUser(data).then(res => {
+      if(res.data.code === '0') {
+        wx.showToast({
+          title: '添加成功',
+        })
+        setTimeout(() => {
+          this.getUserList()
+          this.setData({
+            isShow: false
+          })
+        }, 1500)
+      }
+    })
+  },
+  hideDialog() {
+    this.setData({
+      isShow: false
+    })
+  },
+  showDialog() {
+    this.setData({
+      isShow: true
+    })
+  },
+  getUserList() {
+    api.admin.getUserList().then(res => {
+      if(res.data.code === '0') {
+        this.setData({
+          records: res.data.data
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getUserList()
   },
 
   /**

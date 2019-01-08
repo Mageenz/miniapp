@@ -29,7 +29,7 @@
         <image src='/assets/images/ruzhushenhe@2x.png' class='page-icon'></image>
         <text>入驻审核</text>
       </view>
-      <navigator class='flex-1 flex page-link' hover-class='hoverClass' url='/pages/regionOverview/regionOverview'>
+      <navigator class='flex-1 flex page-link' hover-class='hoverClass' url='/pages/shopLogs/shopLogs'>
         <image src='/assets/images/ruzhushenhe@2x.png' class='page-icon'></image>
         <text>经营概况 </text>
       </navigator>
@@ -39,14 +39,14 @@
   <view class='bg-w ct f-r26 c-1 m-b20'>
     <view class='p-30 f-s30 b-b'>会员管理</view>
     <view class='flex'>
-      <view class='flex-1 flex page-link br'>
+      <navigator url='/pages/relationShipInfo/relationShipInfo' hover-class='hoverClass' class='flex-1 flex page-link br'>
         <image src='/assets/images/wsmp-contacts@2x.png' class='page-icon'></image>
         <text>人脉详情</text>
-      </view>
-      <view class='flex-1 flex page-link'>
+      </navigator>
+      <navigator url='/pages/regionOverview/regionOverview' hover-class='hoverClass'  class='flex-1 flex page-link'>
         <image src='/assets/images/quyu@2x.png' class='page-icon'></image>
-        <text>区域概况  </text>
-      </view>
+        <text>区域概况</text>
+      </navigator>
     </view>
   </view>
 

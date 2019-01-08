@@ -1,5 +1,13 @@
-<view class='page-container'>
+<view class='page-container' wx:if='{{banners.length && categorys1.length && categorys2.length}}'>
   <view>
+    <view class='flex m-b30'>
+      <view class='flex-1 flex'>
+        <image src='/assets/images/dingwei@2x.png' class='dingwei m-r20'></image>
+        <text class='f-m28 c-1'>{{address}}</text>
+      </view>
+      <image src='/assets/images/index-sm.png' class='index-sm m-r20' bindtap='handleSm'></image>
+      <text class='f-r24 c-r' bindtap='handleSm'>扫码</text>
+    </view>
     <view class='searchbar flex m-b20 p-l30'>
       <image class='icon-search' src='/assets/images/sousuo-2@2x.png'></image>
       <text class='f-r26 c-2'>搜索优惠店名、地址</text>
@@ -47,32 +55,39 @@
         </view>
         <view class='bd'></view>
         <view class='item f-r26 c-2'>
-          <text>范围</text>
+          <picker range='{{ranges}}'value='{{range}}' range-key='name' bindchange='handleRangeChange'>
+            <view class='flex range'>
+              <view>{{ranges[range].name}}</view>
+              <image src='/assets/images/index-x.png' class='index-x'></image>
+            </view>
+          </picker>
         </view>
       </view>
-      <view class='good-list' wx:if='{{shops.length && isLoaded}}'>
-        <view class='item flex' wx:for='{{shops}}' wx:key='{{index}}' data-id='{{item.id}}' bindtap='toShopDetail'>
-          <image src='{{item.picUrl}}' class='image m-r20'></image>
-          <view class='info flex-1'>
-            <view class='flex' style='margin-bottom:11rpx;'>
-              <text class='f-m28 c-1 flex-1'>{{item.name}}</text>
-              <text class='f-r22 c-r'>评分：{{item.avgComment}}</text>
-            </view>
-            <view class='f-r22 c-3 flex' style='margin-bottom:6rpx;'>
-              <text class='flex-1'>主营类目：{{item.kinds}}</text>
-              <text>已售：500</text>
-            </view>
-            <view class='f-r22 c-3 flex m-b10'>
-              <text class='flex-1'>地址：{{item.areaDetail}}</text>
-              <text>{{item.distance}}米</text>
-            </view>
-            <view class=''>
-              <text class='yh f-r22 c-r'>优惠{{item.couponsRatio/100}}%</text>
+      <view class='good-list' wx:if='{{shops}}'>
+        <view wx:if='{{shops.length}}'>
+          <view class='item flex' wx:for='{{shops}}' wx:key='{{index}}' data-id='{{item.id}}' bindtap='toShopDetail'>
+            <image src='{{item.picUrl}}' class='image m-r20'></image>
+            <view class='info flex-1'>
+              <view class='flex' style='margin-bottom:11rpx;'>
+                <text class='f-m28 c-1 flex-1'>{{item.name}}</text>
+                <text class='f-r22 c-r'>评分：{{item.avgComment}}</text>
+              </view>
+              <view class='f-r22 c-3 flex' style='margin-bottom:6rpx;'>
+                <text class='flex-1'>主营类目：{{item.kinds}}</text>
+                <text>已售：500</text>
+              </view>
+              <view class='f-r22 c-3 flex m-b10'>
+                <text class='flex-1'>地址：{{item.areaDetail}}</text>
+                <text>{{item.distance}}米</text>
+              </view>
+              <view class=''>
+                <text class='yh f-r22 c-r'>优惠{{item.couponsRatio/100}}%</text>
+              </view>
             </view>
           </view>
         </view>
+        <nodata wx:else></nodata>
       </view>
-      <view wx:if='{{!shops.length && isLoaded}}' class='f-r28 ct c-2 p-30'>暂无数据</view>
     </view>
     <view wx:else class='f-r30 ct p-30 m-t30 c-2'>
       <text>定位失败</text>

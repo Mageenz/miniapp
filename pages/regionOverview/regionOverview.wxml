@@ -1,35 +1,21 @@
-<view class='page-container f-r26 c-1 bg-g'>
-  <view class='m-b20 bg-w'>
-    <view class='flex p-t30 p-r30 p-b20 p-l30 b-b'>
-      <view class='flex-1'>
-        <view class='m-b20'>商家名称：老娘舅</view>
-        <view>消费金额：2342423元</view>
+<view class='page-container f-r26 c-1 bg-g' wx:if='{{records}}'>
+  <view wx:if='{{records.length}}'>
+    <view class='m-b20 bg-w'>
+      <view class='flex p-t30 p-r30 p-b20 p-l30 b-b'>
+        <view class='flex-1'>
+          <view class='m-b20'>商家名称：老娘舅</view>
+          <view>消费金额：2342423元</view>
+        </view>
+        <view class='flex-1'>
+          <view class='m-b20'>会员名称：老娘舅</view>
+          <view>优惠抵用金：2342423元</view>
+        </view>
       </view>
-      <view class='flex-1'>
-        <view class='m-b20'>会员名称：老娘舅</view>
-        <view>优惠抵用金：2342423元</view>
+      <view class='p-t20 p-l30 p-b20 p-r30 flex'>
+        <text class='flex-1'>ID号：223212</text>
+        <text class='c-3'>2018-11-23 14:34:23</text>
       </view>
-    </view>
-    <view class='p-t20 p-l30 p-b20 p-r30 flex'>
-      <text class='flex-1'>ID号：223212</text>
-      <text class='c-3'>2018-11-23 14:34:23</text>
     </view>
   </view>
-  
-  <view class='m-b20 bg-w'>
-    <view class='flex p-t30 p-r30 p-b20 p-l30 b-b'>
-      <view class='flex-1'>
-        <view class='m-b20'>商家名称：老娘舅</view>
-        <view>消费金额：2342423元</view>
-      </view>
-      <view class='flex-1'>
-        <view class='m-b20'>会员名称：老娘舅</view>
-        <view>优惠抵用金：2342423元</view>
-      </view>
-    </view>
-    <view class='p-t20 p-l30 p-b20 p-r30 flex'>
-      <text class='flex-1'>ID号：223212</text>
-      <text class='c-3'>2018-11-23 14:34:23</text>
-    </view>
-  </view>
+  <nodata wx:else></nodata>
 </view>

@@ -17,3 +17,7 @@
 .br {
   border-right: 1rpx rgba(221, 221, 221, 1) solid;
 }
+.rm-x {
+  width: 28rpx;
+  height: 28rpx;
+}

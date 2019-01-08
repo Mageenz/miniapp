@@ -6,22 +6,24 @@ Page({
    * 页面的初始数据
    */
   data: {
+    region: [],
     info: null
   },
-  getAgentInfo() {
-    api.admin.getAgentInfo().then(res => {
+  getCityInfo() {
+    api.agent.getCityInfo().then(res => {
       if (res.data.code === '0') {
         this.setData({
           info: res.data.data
         })
       }
+      wx.stopPullDownRefresh()
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getAgentInfo()
+    this.getCityInfo()
   },
 
   /**
@@ -56,7 +58,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.getAreaInfo()
   },
 
   /**

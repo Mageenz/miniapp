@@ -1,11 +1,7 @@
 <view class='page-container bg-g'>
   <view class='page-head ct m-b20'>
-    <view class='m-b30'>
-      <image src='/assets/images/shoucang copy 4@2x.png' class='icon-star1'></image>
-      <image src='/assets/images/shoucang copy 4@2x.png' class='icon-star1'></image>
-      <image src='/assets/images/shoucang copy 4@2x.png' class='icon-star1'></image>
-      <image src='/assets/images/shoucang copy 4@2x.png' class='icon-star1'></image>
-      <image src='/assets/images/shoucang copy 4@2x.png' class='icon-star1'></image>
+    <view class='m-b30' style='height:42rpx;'>
+      <image src='/assets/images/shoucang copy 4@2x.png' class='icon-star1' wx:for='{{info.vipLevel}}'></image>
     </view>
     <view class='f-r28 c-w'>当前VIP等级</view>
   </view>
@@ -71,7 +67,7 @@
   </view>
 
   <view class='page-foot flex bg-w' style='padding:25rpx 0;'>
-    <button class='page-btn btn1 f-r28'>申请区县合伙人</button>
-    <button class='page-btn btn2 f-r28'>申请市级合伙人</button>
+    <button class='page-btn btn1 f-r28' bindtap='handleNavigate' data-url='/pages/regionJoin/regionJoin'>申请区县合伙人</button>
+    <button class='page-btn btn2 f-r28' bindtap='handleNavigate' data-url='/pages/cityJoin/cityJoin'>申请市级合伙人</button>
   </view>
 </view>

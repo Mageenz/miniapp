@@ -8,6 +8,23 @@ Page({
   data: {
     shops: [],
     isLoaded: false,
+    ranges: [{
+      value: 0,
+      name: '全部'
+    }, {
+      value: 1,
+      name: '500米'
+    }, {
+      value: 2,
+      name: '1km'
+    }, {
+      value: 3,
+      name: '3km'
+    }, {
+      value: 4,
+      name: '5km'
+    }],
+    range: 0,
     filterForm: {
       orderByField: 1,
       isAsc: true,
@@ -20,33 +37,19 @@ Page({
     },
     isLocationAuth: true,
   },
-
+  handleRangeChange(e) {
+    this.setData({
+      range: e.detail.value,
+      'filterForm.range': this.data.ranges[e.detail.value].value
+    })
+    this.getShopList()
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.data.filterForm.categoryId = options.id
     this.getLocation()
-    // wx.getSetting({
-    //   success: res => {
-    //     if (res.authSetting['scope.userLocation']) {
-    //       this.getLocation()
-    //     } else {
-    //       wx.authorize({
-    //         scope: 'scope.userLocation',
-    //         success: () => {
-    //           this.getLocation()
-    //         },
-    //         fail: res => {
-    //           console.log('fail', res)
-    //           this.setData({
-    //             isLocationAuth: false
-    //           })
-    //         }
-    //       })
-    //     }
-    //   }
-    // })
   },
 
   getLocation() {
@@ -79,6 +82,7 @@ Page({
         shops: res.data.data.records || []
       })
       wx.hideNavigationBarLoading()
+      wx.stopPullDownRefresh()
     })
   },
 
@@ -114,7 +118,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.getShopList()
   },
 
   /**

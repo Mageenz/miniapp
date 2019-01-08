@@ -1,18 +1,52 @@
-// pages/couponExchange/couponExchange.js
+const api = require('../../api.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    info: null
   },
-
+  handleDh() {
+    const cash = (this.data.info.price) * (this.data.info.couponsRate / 100)
+    api.admin.getTrans({
+      exchanged: +cash,
+      exchangedType: 2,
+      type: 1
+    }).then(res => {
+      if(res.data.code === '0') {
+        wx.showToast({
+          title: '兑换成功',
+        })
+        setTimeout(() => {
+          wx.navigateBack({
+            delta: 1
+          })
+        }, 1500)
+      }
+    })
+  },
+  handleTx() {
+    const cash = (this.data.info.price) * (this.data.info.couponsRate / 100)
+    wx.navigateTo({
+      url: `/pages/takeoutCash/takeoutCash?cash=${cash}`
+    })
+  },
+  getCouponDetail() {
+    api.admin.getCouponDetail().then(res => {
+      if(res.data.code === '0') {
+        this.setData({
+          info: res.data.data
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getCouponDetail()
   },
 
   /**

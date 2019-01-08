@@ -1,9 +1,9 @@
-<view class='page-container spec p-30 p-t20'>
+<view class='page-container spec p-30 p-t20' wx:if='{{info}}'>
   <view class='colorblock cb-red ct c-w m-b60'>
     <view class='f-r24 m-b20'>积分余额(1积分=1元)</view>
-      <view class='f-s50 m-b20'>123123分</view>
+      <view class='f-s50 m-b20'>{{info.pointBalance}}分</view>
       <view class='flex b-t p-t50'>
-        <view class='flex-1 f-s30'>积分明细 ></view>
+        <navigator url='/pages/scoreLogs/scoreLogs' hover-class='hoverClass' class='flex-1 f-s30'>积分明细 ></navigator>
         <view class='flex-1' style='height:60rpx;'>
           <image src='/assets/images/Group 2@2x.png' class='icon-link'></image>
         </view>
@@ -11,9 +11,9 @@
   </view>
   <view class='colorblock cb-blue ct c-w'>
     <view class='f-r24 m-b20'>优惠抵用金余额(商家消费立即抵现)</view>
-      <view class='f-s50 m-b20'>123123.00元</view>
+      <view class='f-s50 m-b20'>{{info.couponsBalance / 100}}元</view>
       <view class='flex b-t p-t50'>
-        <view class='flex-1 f-s30'>优惠金明细 ></view>
+        <navigator url='/pages/offerLogs/offerLogs' hover-class='hoverClass' class='flex-1 f-s30'>优惠金明细 ></navigator>
         <view class='flex-1' style='height:60rpx;'>
           <image src='/assets/images/Group 4@2x (2).png' class='icon-link'></image>
         </view>

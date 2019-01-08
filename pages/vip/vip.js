@@ -1,18 +1,32 @@
-// pages/vip/vip.js
+const api = require('../../api.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    info: null
   },
-
+  getUserInfo() {
+    api.user.getUserInfo({
+      isAll: false
+    }).then(res => {
+      this.setData({
+        info: res.data.data
+      })
+    })
+  },
+  handleNavigate(e) {
+    wx.navigateTo({
+      url: `${e.currentTarget.dataset.url}`,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getUserInfo()
   },
 
   /**

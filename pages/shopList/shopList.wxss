@@ -25,3 +25,11 @@
 .hot-filters text.active {
   font-weight: bold;
 }
+.index-x {
+  width: 28rpx;
+  height: 15rpx;
+  margin-left: 10rpx;
+}
+.range {
+  justify-content: center;
+}

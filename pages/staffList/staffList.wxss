@@ -1,6 +1,7 @@
 .page-btn {
   justify-content: center;
   height: 100rpx;
+  font-size: 32rpx;
 }
 .page-icon {
   width: 24rpx;

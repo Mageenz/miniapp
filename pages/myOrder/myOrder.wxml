@@ -1,16 +1,16 @@
-<view class='page-container spec'>
+<view class='page-container spec' wx:if='{{records && info}}'>
   <view class='head m-b20'>
     <view class='colorblock cb-red ct c-w'>
       <view class='f-r24 m-b20'>已为您节省(元)</view>
-      <view class='f-s50 m-b20'>123123.00</view>
+      <view class='f-s50 m-b20'>{{info.favorableBalance/100}}</view>
       <view class='flex p-30 b-t'>
         <view class='flex-1'>
-          <view class='f-s30'>3400.00</view>
+          <view class='f-s30'>{{info.pointsBalance}}</view>
           <view class='f-r24'>积分</view>
         </view>
         <view class='flex-1'>
-          <view class='f-s30'>3400.00</view>
-          <view class='f-r24'>积分</view>
+          <view class='f-s30'>{{info.couponsBalance/100}}</view>
+          <view class='f-r24'>优惠抵用券(元)</view>
         </view>
       </view>
     </view>
@@ -18,22 +18,23 @@
 
   <view class='body'>
     <view class='f-s30 ct title'>最近订单</view>
-    <view class='orders'>
-      <view class='flex order' wx:for='{{[1,2,3,4,5]}}'>
-        <image src='/assets/images/good.png' class='image'></image>
+    <view class='orders' wx:if='{{records.length}}'>
+      <view class='flex order' wx:for='{{records}}'>
+        <image src='{{item.businessPicture}}' class='image'></image>
         <view class='flex-1'>
-          <view class='f-m28 c-1 m-b10'>陕老顺肉夹馍</view>
-          <view class='f-r22 c-3'>买单时间：2018-09-28 13:45</view>
-          <view class='f-r22 c-3 m-b10'>已优惠：123元</view>
+          <view class='f-m28 c-1 m-b10'>{{item.businessName}}</view>
+          <view class='f-r22 c-3'>买单时间：{{item.payTime}}</view>
+          <view class='f-r22 c-3 m-b10'>已优惠：{{item.coupons/100}}元</view>
           <view class='flex m-b30'>
-            <text class='card c-r f-r22'>评价奖5元优惠券</text>
+            <!-- <text class='card c-r f-r22'>评价奖5元优惠券</text> -->
             <view class='flex-1 cr f-m28'>实付：123元</view>
           </view>
-          <view class='cr'>
+          <view class='cr' wx:if='{{!item.isCommonet}}'>
             <button class='btn'>评价</button>
           </view>
         </view>
       </view>
     </view>
+    <nodata wx:else></nodata>
   </view>
 </view>

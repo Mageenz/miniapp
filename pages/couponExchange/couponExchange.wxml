@@ -1,19 +1,19 @@
-<view class='page-container bg-g'>
+<view class='page-container bg-g' wx:if='{{info}}'>
   <view class='page-head c-w'>
     <view class='flex f-r28 m-b10'>
       <text class='flex-1'>可兑换值</text>
       <view>
         <text>今日兑换比例：</text>
-        <text>13%</text>
+        <text>{{info.couponsRate}}%</text>
       </view>
     </view>
 
-    <view class='f-m30 c-w' style='font-size:46rpx;'>12313123</view>
+    <view class='f-m30 c-w' style='font-size:46rpx;'>{{info.coupons}}</view>
   </view>
   <view class='flex f-r30 c-1 bg-w ct' style='height:100rpx;'>
-    <view class='flex-1'>可兑换现金：59800x12%=7176元</view>
+    <view class='flex-1'>可兑换现金：{{info.price/100}}x{{info.couponsRate}}%={{(info.price/100)*(info.couponsRate/100)}}元</view>
   </view>
 
-  <button class='page-btn1 f-r30 c-r'>提现</button>
-  <button class='page-btn2 f-r30 c-w'>立即兑换</button>
+  <button class='page-btn1 f-r30 c-r' bindtap='handleTx'>提现</button>
+  <button class='page-btn2 f-r30 c-w' bindtap='handleDh'>立即兑换</button>
 </view>

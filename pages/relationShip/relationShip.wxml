@@ -1,91 +1,75 @@
-<view class='page-container bg-g'>
+<view class='page-container bg-g' wx:if='{{info}}'>
   <view class='p-30 bg-w ct c-w m-b30'>
     <view class='colorblock cb-red'>
       <view class='f-r24 m-b20'>累计积分收益（分）</view>
-      <view class='f-s50 m-b20'>123123.00</view>
+      <view class='f-s50 m-b20'>{{info.totalPoints}}</view>
       <view class='flex p-30 b-t'>
         <view class='flex-1'>
-          <view class='f-s30'>3400.00</view>
+          <view class='f-s30'>{{info.invitePoints}}</view>
           <view class='f-r24'>推荐奖励（分）</view>
         </view>
         <view class='bd'></view>
         <view class='flex-1'>
-          <view class='f-s30'>3400.00</view>
+          <view class='f-s30'>{{info.teamPoints}}</view>
           <view class='f-r24'>团队奖励（分）</view>
         </view>
       </view>
     </view>
   </view>
-
   <view class='f-m30 f-bd p-l30 m-b30'>人脉圈</view>
 
-  <view class='p-l30 p-r30 f-r28 c-1 bg-w m-b20'>
-    <view class='flex p-t30 p-b30 b-b'>
-      <image src='/assets/images/good.png' class='avator m-r20'></image>
-      <text class='m-r30'>张安</text>
-      <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-      <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+  <view wx:if='{{info}}'>
+    <view wx:if='{{info.fans.length}}'>
+      <view class='p-l30 p-r30 f-r28 c-1 bg-w' wx:for='{{info.fans}}' wx:key='{{index1}}' wx:for-item='item1' wx:for-index='index1'>
+        <view class='flex p-t30 p-b30 b-b'>
+          <image src='/assets/images/good.png' class='avator m-r20'></image>
+          <view class='flex-1 flex'>
+            <text class='m-r30'>{{item1.nickName}}</text>
+            <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+            <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+          </view>
+          <image src='/assets/images/rm-x.png' class='rm-x'></image>
+          <!-- <image src='/assets/images/rm-x.png' class='rm-s'></image> -->
+        </view>
+
+        <view class='p-l30' wx:for='{{item1.children}}' wx:for-item='item2' wx:for-index='index2' wx:key='{{index2}}'>
+          <view class='flex p-t30 p-b30 b-b'>
+            <image src='/assets/images/good.png' class='avator m-r20'></image>
+            <view class='flex-1 flex'>
+              <text class='m-r30'>{{item2.nickName}}</text>
+              <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+              <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+            </view>
+            <image src='/assets/images/rm-x.png' class='rm-x'></image>
+          </view>
+          <view class='p-l30' wx:for='{{item2.children}}' wx:for-item='item3' wx:for-index='index2' wx:key='{{index2}}'>
+            <view class='flex p-t30 p-b30 b-b'>
+              <image src='/assets/images/good.png' class='avator m-r20'></image>
+              <view class='flex-1 flex'>
+                <text class='m-r30'>{{item3.nickName}}</text>
+                <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+                <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+              </view>
+              <image src='/assets/images/rm-x.png' class='rm-x'></image>
+            </view>
+
+            <view class='p-l30' wx:for='{{item3.children}}' wx:for-item='item4' wx:for-index='index2' wx:key='{{index2}}'>
+              <view class='flex p-t30 p-b30 b-b'>
+                <image src='/assets/images/good.png' class='avator m-r20'></image>
+                <view class='flex-1 flex'>
+                  <text class='m-r30'>{{item4.nickName}}</text>
+                  <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+                  <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+                </view>
+                <image src='/assets/images/rm-x.png' class='rm-x'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </view>
     </view>
-    <view class='p-t30 p-b30'>
-      <view class='flex m-b20'>
-        <image src='/assets/images/good.png' class='avator m-r20'></image>
-        <text class='m-r30'>张安</text>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-      </view>
-      <view class='flex m-b20'>
-        <image src='/assets/images/good.png' class='avator m-r20'></image>
-        <text class='m-r30'>张安</text>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-      </view>
-      <view class='flex m-b20'>
-        <image src='/assets/images/good.png' class='avator m-r20'></image>
-        <text class='m-r30'>张安</text>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-      </view>
-      <view class='flex'>
-        <image src='/assets/images/good.png' class='avator m-r20'></image>
-        <text class='m-r30'>张安</text>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-      </view>
-    </view>
+    <nodata wx:else></nodata>
   </view>
 
-  <view class='p-l30 p-r30 f-r28 c-1 bg-w m-b20'>
-    <view class='flex p-t30 p-b30 b-b'>
-      <image src='/assets/images/good.png' class='avator m-r20'></image>
-      <text class='m-r30'>张安</text>
-      <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-      <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-    </view>
-    <view class='p-t30 p-b30'>
-      <view class='flex m-b20'>
-        <image src='/assets/images/good.png' class='avator m-r20'></image>
-        <text class='m-r30'>张安</text>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-      </view>
-      <view class='flex m-b20'>
-        <image src='/assets/images/good.png' class='avator m-r20'></image>
-        <text class='m-r30'>张安</text>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-      </view>
-      <view class='flex m-b20'>
-        <image src='/assets/images/good.png' class='avator m-r20'></image>
-        <text class='m-r30'>张安</text>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-      </view>
-      <view class='flex'>
-        <image src='/assets/images/good.png' class='avator m-r20'></image>
-        <text class='m-r30'>张安</text>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-        <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-      </view>
-    </view>
-  </view>
 </view>

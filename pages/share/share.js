@@ -1,18 +1,27 @@
-// pages/share/share.js
+const api = require('../../api.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    info: null
   },
-
+  getShareInfo() {
+    api.share.getShareInfo().then(res => {
+      if(res.data.code === '0') {
+        this.setData({
+          info: res.data.data
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getShareInfo()
   },
 
   /**
@@ -61,6 +70,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: 'U+商城',
+      path: '/pages/index/index'
+    }
   }
 })

@@ -6,18 +6,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    records: null
   },
-  getRegionOverview() {
-    api.agent.getRegionOverview().then(res => {
-      
+  getManageInfo() {
+    api.agent.getRegionOverviewInfo({
+      size: 100,
+      current: 1
+    }).then(res => {
+      if(res.data.code === '0') {
+        this.setData({
+          records: res.data.data.records
+        })
+      }
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getManageInfo()
   },
 
   /**

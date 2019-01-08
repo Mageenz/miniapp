@@ -1,15 +1,16 @@
-<view class='page-container'>
-  <view class='messages'>
-    <view class='message flex' wx:for='{{9}}'>
+<view class='page-container' wx:if='{{records}}'>
+  <view class='messages' wx:if='{{records.length}}'>
+    <view class='message flex' wx:for='{{records}}'>
       <view class='flex-1'>
         <view class='flex m-b10'>
-          <view class='flex-1 f-m28 c-1 lh1'>购买会员卡（赠送）</view>
-          <view class='f-r32 c-r'>+250分</view>
+          <view class='flex-1 f-m28 c-1 lh1'>{{operationType[item.operationType]}}</view>
+          <view class='f-r32 c-r'>{{changedValue}}分</view>
         </view>
         <view class='flex'>
-          <view class='flex-1 f-r24 c-3'>2018-02-12 10:34:12</view>
+          <view class='flex-1 f-r24 c-3'>{{createdTime}}</view>
         </view>
       </view>
     </view>
   </view>
+  <nodata wx:else></nodata>
 </view>

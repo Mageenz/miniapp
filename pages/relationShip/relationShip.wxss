@@ -7,3 +7,7 @@
   height: 56rpx;
   margin-right: 14rpx;
 }
+.rm-x {
+  width: 28rpx;
+  height: 28rpx;
+}

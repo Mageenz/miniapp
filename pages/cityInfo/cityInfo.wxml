@@ -1,0 +1,24 @@
+<view class='page-container bg-g' wx:if='{{info}}'>
+  <navigator hover-class='hoverClass' url='/pages/cityOverview/cityOverview'>
+    <view class='module bg-w flex p-l30 p-r30 m-b20'>
+      <text class='f-r30 c-1 flex-1'>合伙城市</text>
+      <view class='f-r30 c-2 m-r20'>{{info.provName}} {{info.cityName}}</view>
+    </view>
+  </navigator>
+  <view class='bg-w m-b20 f-r26 c-1 ct p-l30 p-r30 b-b' style='padding-top:50rpx'>
+    <view class='b-b' style='padding-bottom:39rpx;'>
+      <view class='m-b20'>累计收入积分（分）</view>
+      <view class='f-m30'>{{info.totalPoints}}</view>
+    </view>
+    <view class='flex' style='padding-top:39rpx; padding-bottom:39rpx;'>
+      <view class='flex-1'>
+        <view class='m-b20'>区域内商家数（个）</view>
+        <view class='f-m30'>{{info.businessCounts}}</view>
+      </view>
+      <view class='flex-1'>
+        <view class='m-b20'>直推会员数（个）</view>
+        <view class='f-m30'>{{info.memberCounts}}</view>
+      </view>
+    </view>
+  </view>
+</view>
