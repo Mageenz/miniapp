@@ -1,5 +1,5 @@
 <view class='page-container spec'>
-  <view class='my-head m-b20'>
+  <navigator url='/pages/personalSetting/personalSetting' hover-class='hoverClass' class='my-head m-b20'>
     <view class='flex ai-top'>
       <image src='{{info.avatarUrl}}' class='avator m-r30'></image>
       <view class='flex-1'>
@@ -12,7 +12,7 @@
       </view>
       <image src='/assets/images/myback.png' class='icon-go'></image>
     </view>
-  </view>
+  </navigator>
 
   <view class='body m-b20'>
     <view class='modules'>
@@ -32,23 +32,25 @@
           <image src='/assets/images/go.png' class='icon-go'></image>
         </view>
       </navigator>
-      <navigator hover-class='hoverClass' url='/pages/relationShip/relationShip'>
+      <!-- <navigator hover-class='hoverClass' url='/pages/relationShip/relationShip'>
         <view class='module flex p-r30 p-l30'>
           <text class='flex-1 f-r30 c-1'>人脉</text>
           <image src='/assets/images/go.png' class='icon-go'></image>
         </view>
-      </navigator>
-      <navigator hover-class='hoverClass' url='/pages/vip/vip'>
+      </navigator> -->
+      <!-- <navigator hover-class='hoverClass' url='/pages/vip/vip'>
         <view class='module flex p-r30 p-l30'>
           <text class='flex-1 f-r30 c-1'>VIP</text>
           <image src='/assets/images/go.png' class='icon-go'></image>
         </view>
+      </navigator> -->
+      <navigator hover-class='hoverClass' url='/pages/collections/collections'>
+        <view class='module flex p-r30 p-l30'>
+          <text class='flex-1 f-r30 c-1'>收藏</text>
+          <image src='/assets/images/go.png' class='icon-go'></image>
+        </view>
       </navigator>
-      <view class='module flex p-r30 p-l30' bindtap='handleNavigate' data-path='/pages/collections/collections'>
-        <text class='flex-1 f-r30 c-1'>收藏</text>
-        <image src='/assets/images/go.png' class='icon-go'></image>
-      </view>
-      <navigator hover-class='hoverClass' url='/pages/regionInfo/regionInfo'>
+      <!-- <navigator hover-class='hoverClass' url='/pages/regionInfo/regionInfo'>
         <view class='module flex p-r30 p-l30'>
           <text class='flex-1 f-r30 c-1'>区县合伙人</text>
           <image src='/assets/images/go.png' class='icon-go'></image>
@@ -59,7 +61,7 @@
           <text class='flex-1 f-r30 c-1'>市级合伙人</text>
           <image src='/assets/images/go.png' class='icon-go'></image>
         </view>
-      </navigator>
+      </navigator> -->
     </view>
   </view>
 
@@ -69,16 +71,18 @@
         <text class='flex-1 f-r30 c-1'>商家入驻</text>
         <image src='/assets/images/go.png' class='icon-go'></image>
       </view>
-      <navigator hover-class='hoverClass' url='/pages/shopAdmin/shopAdmin'>
+      <!-- <navigator hover-class='hoverClass' url='/pages/shopAdmin/shopAdmin'>
         <view class='module flex p-r30 p-l30'>
           <text class='flex-1 f-r30 c-1'>商家管理</text>
           <image src='/assets/images/go.png' class='icon-go'></image>
         </view>
+      </navigator> -->
+      <navigator url='/pages/personalSetting/personalSetting' hover-class='hoverClass'>
+        <view class='module flex p-r30 p-l30' style='border-bottom: 0;'>
+          <text class='flex-1 f-r30 c-1'>个人设置</text>
+          <image src='../../assets/images/go.png' class='icon-go'></image>
+        </view>
       </navigator>
-      <view class='module flex p-r30 p-l30' style='border-bottom: 0;'>
-        <text class='flex-1 f-r30 c-1'>设置</text>
-        <image src='../../assets/images/go.png' class='icon-go'></image>
-      </view>
     </view>
   </view>
 </view>

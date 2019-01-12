@@ -66,8 +66,13 @@ Page({
       current: 1,
       size: 100
     }).then(res => {
+      let comments = res.data.data.records || []
+      comments = comments.map(item => {
+        item.pictures = item.picture.split(',')
+        return item
+      })
       this.setData({
-        comments: res.data.data.records || []
+        comments
       })
     })
   },

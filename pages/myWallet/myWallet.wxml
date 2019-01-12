@@ -4,9 +4,9 @@
       <view class='f-s50 m-b20'>{{info.pointBalance}}分</view>
       <view class='flex b-t p-t50'>
         <navigator url='/pages/scoreLogs/scoreLogs' hover-class='hoverClass' class='flex-1 f-s30'>积分明细 ></navigator>
-        <view class='flex-1' style='height:60rpx;'>
-          <image src='/assets/images/Group 2@2x.png' class='icon-link'></image>
-        </view>
+        <navigator url='{{"/pages/scoreExchange/scoreExchange?points=" + info.pointBalance}}' hover-class='hoverClass' class='flex-1' style='height:60rpx;'>
+          <image src='/assets/images/asdwe31.png' class='icon-link'></image>
+        </navigator>
       </view>
   </view>
   <view class='colorblock cb-blue ct c-w'>
@@ -14,9 +14,9 @@
       <view class='f-s50 m-b20'>{{info.couponsBalance / 100}}元</view>
       <view class='flex b-t p-t50'>
         <navigator url='/pages/offerLogs/offerLogs' hover-class='hoverClass' class='flex-1 f-s30'>优惠金明细 ></navigator>
-        <view class='flex-1' style='height:60rpx;'>
-          <image src='/assets/images/Group 4@2x (2).png' class='icon-link'></image>
-        </view>
+        <navigator url='/pages/vipJoin/vipJoin' hover-class='hoverClass' class='flex-1' style='height:60rpx;'>
+          <image src='/assets/images/ghaas123.png' class='icon-link'></image>
+        </navigator>
       </view>
   </view>
 </view>

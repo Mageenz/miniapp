@@ -17,8 +17,8 @@
   </view>
 
   <view class='body'>
-    <view class='f-s30 ct title'>最近订单</view>
-    <view class='orders' wx:if='{{records.length}}'>
+    <view class='f-s30 ct title bg-w'>最近订单</view>
+    <view class='orders bg-w' wx:if='{{records.length}}'>
       <view class='flex order' wx:for='{{records}}'>
         <image src='{{item.businessPicture}}' class='image'></image>
         <view class='flex-1'>

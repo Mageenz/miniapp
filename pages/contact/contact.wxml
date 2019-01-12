@@ -9,11 +9,11 @@
     <view>如需调整请联系您所在城市运营商</view>
     <view class='flex'>
       <view class='flex-1'>
-        <image src='/assets/images/Group 2@2x (2).png' class='page-icon'></image>
+        <image src='/assets/images/asdvasd.png' class='page-icon'></image>
         <view class='f-m30'>{{info.phone}}</view>
       </view>
       <view class='flex-1'>
-        <image src='/assets/images/Group@2x (1).png' class='page-icon'></image>
+        <image src='/assets/images/12ada.png' class='page-icon'></image>
         <view class='f-m30'>{{info.phone}}</view>
       </view>
     </view>

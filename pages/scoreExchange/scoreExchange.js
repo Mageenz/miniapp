@@ -1,18 +1,36 @@
-// pages/scoreExchange/scoreExchange.js
+const api = require('../../api.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    totalPoints: null
   },
-
+  back() {
+    wx.navigateBack({
+      delta: 1
+    })
+  },
+  exchangePoints() {
+    api.user.exchangePoints({
+      totalPoints: this.data.totalPoints
+    }).then(res => {
+      if(res.data.code === '0') {
+        wx.navigateTo({
+          url: '/pages/scoreExchangeSuccess/scoreExchangeSuccess',
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      totalPoints: options.points
+    })
   },
 
   /**

@@ -6,40 +6,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-    currentIndex: 0,
-    cards: null
+    categorys: null
   },
-  buyCard() {
-    api.pay.payCard({
-      code: '',
-      memberCardId: this.data.cards[this.data.currentIndex].id,
-      payAmount: this.data.cards[this.data.currentIndex].price,
-      tradeCode: 2,
-      type: 1
+  getCategorys() {
+    api.home.getCategorys({
+      limit: 100,
+      isFirst: false
     }).then(res => {
-      
-    })
-  },
-  getVipCards() {
-    api.pay.getVipCards().then(res => {
       if(res.data.code === '0') {
+        const list = res.data.data
+        let categorys = []
+        
+        list.forEach(item => {
+          if (item.parentId === '0') {
+            item.children = []
+            categorys.push(item)
+          } else {
+            categorys.forEach(category => {
+              if(category.id === item.parentId) {
+                category.children.push(item)
+              }
+            })
+          }
+        })
+
         this.setData({
-          cards: res.data.data
+          categorys
         })
       }
     })
   },
-  chooseCard(e) {
-    this.setData({
-      currentIndex: e.currentTarget.dataset.index
-    })
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getVipCards()
+    this.getCategorys()
   },
 
   /**

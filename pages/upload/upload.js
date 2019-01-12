@@ -13,7 +13,7 @@ Page({
     wx.chooseImage({
       success: res => {
         wx.uploadFile({
-          url: 'http://liuq.ngrok.xiaomiqiu.cn/file/upload',
+          url: `${api.domain}/file/upload`,
           filePath: res.tempFilePaths[0],
           name: 'file',
           success: res => {

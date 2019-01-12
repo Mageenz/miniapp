@@ -1,18 +1,18 @@
-<view class='page-container p-30'>
+<view class='page-container p-30' wx:if='{{cards}}'>
   <view class='cards flex ct'>
-    <view wx:for='{{cards}}' class='{{index == currentIndex ? "active card" : "card"}}' bindtap='chooseCard' data-index='{{index}}'>
-      <view class='f-r24 c-1' style='margin-bottom:8rpx'>普卡</view>
-      <view class='f-m28 c-1' style='margin-bottom:15rpx'>￥500.00</view>
-      <view class='f-r20 reward m-b10'>+200积分</view>
-      <view class='f-r20 reward'>+200优惠金</view>
+    <view wx:for='{{cards}}' class='{{index == currentIndex ? "active card" : "card"}}' bindtap='chooseCard' data-index='{{index}}' data-id='{{item.id}}'>
+      <view class='f-r24 c-1' style='margin-bottom:8rpx'>{{item.name}}</view>
+      <view class='f-m28 c-1' style='margin-bottom:15rpx'>￥{{item.price/100}}</view>
+      <view class='f-r20 reward m-b10'>+{{item.points}}积分</view>
+      <view class='f-r20 reward'>+{{item.coupons/100}}优惠金</view>
     </view>
   </view>
 
-  <view class='f-r28 c-1 des'>含250积分，1积分=1元，价值250元 含600优惠抵用金，价值600元</view>
+  <view class='f-r28 c-1 des'>含{{cards[currentIndex].points}}积分，1积分=1元，价值{{cards[currentIndex].points}}元 含{{cards[currentIndex].coupons/100}}优惠抵用金，价值{{cards[currentIndex].coupons/100}}元</view>
 
-  <view class='f-m32 c-r ct'>合计价值：850元</view>
+  <view class='f-m32 c-r ct'>合计价值：{{cards[currentIndex].points + cards[currentIndex].coupons/100}}元</view>
 
-  <button class='btn-join c-w f-r32'>立即开通</button>
+  <button class='btn-join c-w f-r32' bindtap='buyCard'>立即开通</button>
 
   <view class='f-r28 c-3'>
     <view class='f-r30 c-1 m-b30'>权益说明</view>

@@ -33,7 +33,7 @@
             </view>
             <view class='f-r22 c-3 flex' style='margin-bottom:6rpx;'>
               <text class='flex-1'>主营类目：{{item.kinds}}</text>
-              <text>已售：500</text>
+              <text>已售：{{item.saleCounts}}</text>
             </view>
             <view class='f-r22 c-3 flex m-b10'>
               <text class='flex-1'>地址：{{item.areaDetail}}</text>

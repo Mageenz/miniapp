@@ -31,13 +31,14 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 41,
 			"list": [
 				{
 					"id": 0,
-					"name": "搜索页",
-					"pathName": "pages/search/search",
-					"query": ""
+					"name": "全部分类",
+					"pathName": "pages/allCategorys/allCategorys",
+					"query": "",
+					"scene": "1011"
 				},
 				{
 					"id": 1,
@@ -281,6 +282,13 @@
 					"name": "注册",
 					"pathName": "pages/register/register",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": "1011"
 				}
 			]
 		}

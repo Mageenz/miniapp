@@ -1,3 +1,8 @@
+.page-container {
+  background-color: RGBA(243, 243, 243, 1);
+  min-height: 100vh;
+  padding: 0;
+}
 .searchbar {
   justify-content: flex-start;
   background-color: #fff;
@@ -33,45 +38,4 @@
   margin-bottom: 5rpx;
   border: 1px RGBA(212, 214, 215, 1) solid;
   box-sizing: border-box;
-}
-
-.hot-filters .item{
-  width: 25%;
-}
-.hot-filters .bd {
-  width: 0;
-  height: 24rpx;
-  border-right: 2rpx rgba(168, 173, 175, 1) solid;
-}
-.good-list {
-  margin-top: 20rpx;
-}
-.good-list .item {
-  padding: 30rpx 0;
-  justify-content: flex-start;
-  border-top: 1rpx rgba(221, 221, 221, 1) solid;
-}
-.good-list .image {
-  width: 160rpx;
-  height: 160rpx;
-}
-.hot-filters text {
-  display: block;
-  width: 100%;
-}
-.hot-filters text.active {
-  font-weight: bold;
-}
-.index-x {
-  width: 28rpx;
-  height: 15rpx;
-  margin-left: 10rpx;
-}
-.range {
-  justify-content: center;
-}
-.yh {
-  border: 1px rgba(229, 57, 53, 1) solid;
-  border-radius: 2rpx;
-  padding: 5rpx 11rpx;
 }

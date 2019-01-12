@@ -11,7 +11,7 @@
         <view class='f-m30 c1 name'>{{detail.business.name}}</view>
         <view class='pf-wrap m-b20 flex'>
           <view class='pf-star flex m-r20' style='background-image:url(/assets/images/star-kx.png)'>
-            <view class='star-sx' style='{{"background-image:url(/assets/images/star-sx.png); width:"+ detail.busniess.avgComment/5}}'></view>
+            <view class='star-sx' style='{{"background-image:url(/assets/images/star-sx.png); width:"+ (detail.business.avgComment/5*100) + "%"}}'></view>
           </view>
           <text class='f-r22 c-2'>{{detail.business.avgComment}}分（{{detail.business.totalComment}}人评）</text>
         </view>
@@ -47,22 +47,22 @@
         <view class='f-m28 c-1'>用户评论</view>
       </view>
       <view class='comments' wx:if='{{comments.length}}'>
-        <view class='flex comment' wx:for='{{comments}}' key='{{item.id}}'>
+        <view class='flex comment' wx:for='{{comments}}' key='{{item.id}}' style='{{"border-bottom:" + (index+1 === comments.length ? "0" : "1rpx rgba(221, 221, 221, 1) solid") }}'>
           <image src='/assets/images/good.png' class='avator m-r20'></image>
           <view class='flex-1'>
             <view class='flex' style='margin-bottom:5rpx;'>
-              <text class='flex-1 f-r22 c-1'>姓名</text>
+              <text class='flex-1 f-r22 c-1'>{{item.memberNickName}}</text>
               <text class='f-r22 c-2'>{{item.time}}</text>
             </view>
             <view class='flex' style='margin-bottom: 17rpx;'>
               <text class='f-r22 c-2'>评分：</text>
               <view class='pf-star' style='background-image:url(/assets/images/star-kx.png)'>
-                <view class='star-sx' style='{{"background-image:url(/assets/images/star-sx.png);width:"+(item.score/5)}}'></view>
+                <view class='star-sx' style='{{"background-image:url(/assets/images/star-sx.png);width:"+(item.score/5*100) + "%"}}'></view>
               </view>
             </view>
             <view class='f-r22 c-1 m-b20'>{{item.content}}</view>
             <view>
-              <image src='{{item.picture}}' class='good-image m-r20'></image>
+              <image src='{{picture}}' class='good-image m-r20' wx:for='{{item.pictures}}' wx:for-item='picture'></image>
             </view>
           </view>
         </view>

@@ -1,13 +1,13 @@
 <view class='page-container spec'>
   <view class='head flex ct f-r26 c-1 p-t30 bg-w p-b30 m-b20'>
     <view class='flex-1'>
-      <image src='/assets/images/Group Copy@2x.png' class='page-image1'></image>
+      <image src='/assets/images/hadae123.png' class='page-image1'></image>
       <view class='m-b10'>新注册会员</view>
       <view>赠送{{info.registerCoupons}}元优惠金</view>
     </view>
     <view class='page-bd'></view>
     <view class='flex-1'>
-      <image src='/assets/images/Group 4@2x (3).png' class='page-image2'></image>
+      <image src='/assets/images/hjasda123.png' class='page-image2'></image>
       <view class='m-b10'>推荐好友</view>
       <view>邀请成功送{{info.inviteCoupons}}元优惠金/人</view>
     </view>
@@ -25,7 +25,7 @@
       <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
     </view> -->
     <view class='module flex p-r30 p-l30'>
-      <image src='/assets/images/二维码@2x.png' class='page-icon'></image>
+      <image src='/assets/images/bas.png' class='page-icon'></image>
       <text class='flex-1 f-r30 c-1'>二维码邀请</text>
       <image src='/assets/images/go.png' class='icon-go'></image>
     </view>

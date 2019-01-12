@@ -25,8 +25,8 @@
           <image src='/assets/images/good.png' class='avator m-r20'></image>
           <view class='flex-1 flex'>
             <text class='m-r30'>{{item1.nickName}}</text>
-            <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-            <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+            <image src='/assets/images/gadasd123.png' class='tag'></image>
+            <image src='/assets/images/gadasd123.png' class='tag'></image>
           </view>
           <image src='/assets/images/rm-x.png' class='rm-x'></image>
           <!-- <image src='/assets/images/rm-x.png' class='rm-s'></image> -->
@@ -37,8 +37,8 @@
             <image src='/assets/images/good.png' class='avator m-r20'></image>
             <view class='flex-1 flex'>
               <text class='m-r30'>{{item2.nickName}}</text>
-              <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-              <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+              <image src='/assets/images/gadasd123.png' class='tag'></image>
+              <image src='/assets/images/gadasd123.png' class='tag'></image>
             </view>
             <image src='/assets/images/rm-x.png' class='rm-x'></image>
           </view>
@@ -47,8 +47,8 @@
               <image src='/assets/images/good.png' class='avator m-r20'></image>
               <view class='flex-1 flex'>
                 <text class='m-r30'>{{item3.nickName}}</text>
-                <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-                <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+                <image src='/assets/images/gadasd123.png' class='tag'></image>
+                <image src='/assets/images/gadasd123.png' class='tag'></image>
               </view>
               <image src='/assets/images/rm-x.png' class='rm-x'></image>
             </view>
@@ -58,8 +58,8 @@
                 <image src='/assets/images/good.png' class='avator m-r20'></image>
                 <view class='flex-1 flex'>
                   <text class='m-r30'>{{item4.nickName}}</text>
-                  <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
-                  <image src='/assets/images/Group 4 Copy 2@2x.png' class='tag'></image>
+                  <image src='/assets/images/gadasd123.png' class='tag'></image>
+                  <image src='/assets/images/gadasd123.png' class='tag'></image>
                 </view>
                 <image src='/assets/images/rm-x.png' class='rm-x'></image>
               </view>

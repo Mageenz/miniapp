@@ -14,7 +14,7 @@ Page({
     filterForm: {
       orderByField: 1,
       isAsc: true,
-      range: 500,
+      range: 0,
       size: 100,
       current: 1,
       lng: '',
@@ -69,7 +69,7 @@ Page({
 
     if(dataset.index == 4) {
       wx.navigateTo({
-        url: '/pages/search/search',
+        url: '/pages/allCategorys/allCategorys',
       })
     } else {
       wx.navigateTo({
@@ -154,7 +154,7 @@ Page({
         this.setData({
           categorys1: res.data.data.slice(0, 5),
           categorys2: res.data.data.slice(5).concat([{
-            wapBannerUrl: '/assets/images/Oval Copy 7@2x.png',
+            wapBannerUrl: '/assets/images/index-all.png',
             name: '全部类别'
           }])
         })

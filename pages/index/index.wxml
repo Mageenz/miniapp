@@ -5,13 +5,13 @@
         <image src='/assets/images/dingwei@2x.png' class='dingwei m-r20'></image>
         <text class='f-m28 c-1'>{{address}}</text>
       </view>
-      <image src='/assets/images/index-sm.png' class='index-sm m-r20' bindtap='handleSm'></image>
-      <text class='f-r24 c-r' bindtap='handleSm'>扫码</text>
+      <!-- <image src='/assets/images/index-sm.png' class='index-sm m-r20' bindtap='handleSm'></image>
+      <text class='f-r24 c-r' bindtap='handleSm'>扫码</text> -->
     </view>
-    <view class='searchbar flex m-b20 p-l30'>
+    <navigator hover-class='hoverClass' url='/pages/search/search' class='searchbar flex m-b20 p-l30'>
       <image class='icon-search' src='/assets/images/sousuo-2@2x.png'></image>
       <text class='f-r26 c-2'>搜索优惠店名、地址</text>
-    </view>
+    </navigator>
 
     <view class='swiper-wrap'>
       <swiper indicator-dots='{{true}}' autoplay='{{true}}' circular='{{true}}' class='swiper'>
@@ -74,7 +74,7 @@
               </view>
               <view class='f-r22 c-3 flex' style='margin-bottom:6rpx;'>
                 <text class='flex-1'>主营类目：{{item.kinds}}</text>
-                <text>已售：500</text>
+                <text>已售：{{item.saleCounts}}</text>
               </view>
               <view class='f-r22 c-3 flex m-b10'>
                 <text class='flex-1'>地址：{{item.areaDetail}}</text>

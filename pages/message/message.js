@@ -11,7 +11,9 @@ Page({
   },
   getMessages() {
     wx.showNavigationBarLoading()
-    api.common.getMessages().then(res => {
+    api.common.getMessages({
+      areaId: 100100
+    }).then(res => {
       this.setData({
         messages: res.data.data.map(item => {
           item.date = util.formatTime(item.date)

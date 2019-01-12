@@ -16,6 +16,7 @@ Page({
           info: res.data.data
         })
       }
+      wx.stopPullDownRefresh()
     })
   },
   getUserOrders() {
@@ -28,6 +29,7 @@ Page({
           records: res.data.data.records
         })
       }
+      wx.stopPullDownRefresh()
     })
   },
   /**
@@ -70,7 +72,8 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.getUserOrderInfo()
+    this.getUserOrders()
   },
 
   /**

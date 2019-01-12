@@ -3,9 +3,6 @@
   padding: 20rpx 30rpx 30rpx 30rpx;
 }
 
-.body {
-  background-color: #fff;
-}
 .title {
   line-height: 93rpx;
   border-bottom: 1rpx RGBA(221, 221, 221, 1) solid;

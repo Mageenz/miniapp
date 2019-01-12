@@ -28,7 +28,7 @@ Page({
     filterForm: {
       orderByField: 1,
       isAsc: true,
-      range: 500,
+      range: 0,
       size: 20,
       current: 1,
       lng: '',
@@ -36,6 +36,11 @@ Page({
       categoryId: ''
     },
     isLocationAuth: true,
+  },
+  toShopDetail(e) {
+    wx.navigateTo({
+      url: `/pages/shopDetail/shopDetail?id=${e.currentTarget.dataset.id}`,
+    })
   },
   handleRangeChange(e) {
     this.setData({

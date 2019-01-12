@@ -1,29 +1,37 @@
-<view class='page-container spec p-t20'>
+<view class='page-container spec p-t20' wx:if='{{info}}'>
   <view class='bg-w m-b20'>
-    <view class='flex p-t20 p-b20 p-r30 p-l30 b-b'>
+    <view class='flex p-t20 p-b20 p-r30 p-l30 b-b' bindtap='handleChooseImage'>
       <text class='flex-1 f-r30 c-1'>头像</text>
-      <image src='/assets/images/good.png' class='avator m-r20'></image>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      <image src='{{form.avatarUrl}}' class='avator m-r20'></image>
+      <image src='/assets/images/go.png' class='icon-go'></image>
     </view>
     <view class='module flex b-b'>
-      <text class='f-r30 c-1 flex-1'>昵称</text>
-      <text class='f-r30 c-2 m-r20'>小王</text>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      <text class='f-r30 c-1'>昵称</text>
+      <input placeholder='请输入昵称' bindinput='handleNicknameInput' class='f-r30 c-2 flex-1 cr m-r20' value='{{form.nickName}}'></input>
+      <image src='/assets/images/go.png' class='icon-go'></image>
     </view>
     <view class='module flex b-b'>
       <text class='f-r30 c-1 flex-1'>手机号码</text>
-      <text class='f-r30 c-2 m-r20'>1351231131</text>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      <text class='f-r30 c-2'>{{info.phone}}</text>
+      <!-- <image src='/assets/images/go.png' class='icon-go'></image> -->
     </view>
     <view class='module flex b-b'>
-      <text class='f-r30 c-1 flex-1'>性别</text>
-      <text class='f-r30 c-2 m-r20'>男</text>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      <text class='f-r30 c-1'>性别</text>
+      <view class='flex-1 m-r20'>
+        <picker value='{{form.sex}}' range='{{sex}}' bindchange='handleSexChange'>
+          <view class='f-r30 c-2 cr'>{{sex[form.sex]}}</view>
+        </picker>
+      </view>
+      <image src='/assets/images/go.png' class='icon-go'></image>
     </view>
     <view class='module flex'>
-      <text class='f-r30 c-1 flex-1'>生日</text>
-      <text class='f-r30 c-2 m-r20'>1993-09-24</text>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      <text class='f-r30 c-1'>生日</text>
+      <view class='flex-1 m-r20'>
+        <picker mode='date' value='{{form.birth}}' bindchange='handleBChange'>
+          <view class='f-r30 c-2 cr'>{{form.birth || '请选择生日'}}</view>
+        </picker>
+      </view>
+      <image src='/assets/images/go.png' class='icon-go'></image>
     </view>
   </view>
 
@@ -31,25 +39,24 @@
     <view class='module flex b-b'>
       <text class='f-r30 c-1 flex-1'>微信</text>
       <text class='f-r30 c-2 m-r20'>去绑定/已绑定</text>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
-    </view>
-    <view class='module flex'>
-      <text class='f-r30 c-1 flex-1'>支付宝</text>
-      <text class='f-r30 c-2 m-r20'>去绑定/已绑定</text>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      <image src='/assets/images/go.png' class='icon-go'></image>
     </view>
   </view>
 
-  <view class='bg-w'>
+  <view class='bg-w m-b30'>
     <view class='module flex b-b'>
-      <text class='f-r30 c-1 flex-1'>姓名</text>
-      <text class='f-r30 c-2 m-r20'>123213</text>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      <text class='f-r30 c-1'>姓名</text>
+      <input placeholder='请输入姓名' bindinput='handleRInput' class='f-r30 c-2 flex-1 cr m-r20' value='{{form.realName}}'></input>
+      <image src='/assets/images/go.png' class='icon-go'></image>
     </view>
     <view class='module flex'>
-      <text class='f-r30 c-1 flex-1'>身份证号码</text>
-      <text class='f-r30 c-2 m-r20'>123131231313</text>
-      <image src='/assets/images/Group 7@2x.png' class='icon-go'></image>
+      <text class='f-r30 c-1'>身份证号码</text>
+      <input placeholder='请输入身份证号码' bindinput='handleSInput' class='f-r30 c-2 flex-1 cr m-r20' value='{{form.cardNumber}}'></input>
+      <image src='/assets/images/go.png' class='icon-go'></image>
     </view>
+  </view>
+
+  <view class='p-l30 p-r30'>
+    <button class='btn primary' bindtap='updateUserInfo'>保存</button>
   </view>
 </view>

@@ -1,0 +1,18 @@
+<view class='page-container' wx:if='{{categorys}}'>
+  <view class='searchbar flex m-b30'>
+    <!-- <image class='icon-back' src='/assets/images/arrow-left.png'></image> -->
+    <navigator class='flex-1 fc-wrap flex' url='/pages/search/search' hover-class='h'>
+      <image class='icon-search' src='/assets/images/sousuo-2@2x.png'></image>
+      <input placeholder='请输入商家名' class='flex-1 f-r26 c-3 fc' disabled='true'></input>
+    </navigator>
+  </view>
+  <view wx:for='{{categorys}}'>
+    <view class='flex title m-b30'>
+      <image src='{{item.wapBannerUrl}}' class='icon m-r20'></image>
+      <text class='f-m30'>{{item.name}}</text>
+    </view>
+    <view class='category flex m-b30'>
+      <view class='item f-r24 c-3' wx:for='{{item.chilren}}'>{{item.name}}</view>
+    </view>
+  </view>
+</view>

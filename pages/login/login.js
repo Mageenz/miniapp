@@ -34,10 +34,12 @@ Page({
         } else if (code === '0') {
           wx.setStorage({
             key: 'SESSION',
-            data: res.header['Set-Cookie'].split(';')[0].split('=')[1]
-          })
-          wx.switchTab({
-            url: '/pages/index/index',
+            data: res.header['Set-Cookie'].split(';')[0].split('=')[1],
+            success: () => {
+              wx.switchTab({
+                url: '/pages/index/index',
+              })
+            }
           })
         }
       }).catch(err => {
